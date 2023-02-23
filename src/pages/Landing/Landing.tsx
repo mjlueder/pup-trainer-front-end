@@ -13,7 +13,8 @@ const Landing = (props: LandingProps): JSX.Element => {
 
   return (
     <main className={styles.container}>
-      <h1>hello, {user ? user.name : 'friend'}</h1>
+      <h1>Welcome to Pup-Trainer!</h1>
+      <h4>App description</h4>
     </main>
   )
 }
