@@ -28,17 +28,15 @@ const DogCard = (props: DogCardProps): JSX.Element => {
       <h4>{dog.breed}</h4>}
       {dog.personality &&
       <h4>{dog.personality}</h4>}
-      {/* {dog.photo && */}
       <img src={dog.photo ? dog.photo : DefaultDog} alt={`dog ${dog.name}`} style={{width: '300px'}}/>
-      {/* } */}
-      {user?.profile.id === dog.ownerId.id &&
+      {/* {user?.profile.id === dog.ownerId &&
         <div>
-          <button onClick={() => handleDeleteDog(dog.id)}>Delete</button>
-          <Link to=''>
-            <button>Edit</button>
+          <button onClick={() => handleDeleteDog(dog.id)}>Remove Dog</button>
+          <Link to={`/dogs/${dog.id}`}>
+            <button>Edit Dog</button>
           </Link>
         </div>
-      }
+      } */}
     </>
   )
 }

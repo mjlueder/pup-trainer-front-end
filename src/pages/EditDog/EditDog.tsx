@@ -1,7 +1,15 @@
+//types
+import { User } from "../../types/models";
+
+interface EditDogProps {
+  user: User | null;
+}
+
 // components
 import EditDogForm from "../../components/EditDogForm/EditDogForm"
 
-const EditDog = (): JSX.Element => {
+const EditDog = (props: EditDogProps): JSX.Element => {
+  const { user } = props
 
   return (
     <>

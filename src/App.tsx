@@ -14,6 +14,7 @@ import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import Dogs from './pages/Dogs/Dogs'
 import NewDog from './pages/NewDog/NewDog'
+import EditDog from './pages/EditDog/EditDog'
 
 // services
 import * as authService from './services/authService'
@@ -57,13 +58,16 @@ function App(): JSX.Element {
   const handleAddDog = async (dogData: DogFormData): Promise<void> => {
     const newDog = await dogService.create(dogData)
     setDogs([newDog, ...dogs])
-    navigate('/dogs')
+    navigate('/profile')
   }
 
   const handleDeleteDog = async (id: number): Promise<void> => {
-    const deletedDog = await dogService.delete(id)
-    setDogs(dogs.filter(dog => dog.id !== deletedDog.id))
-    navigate('/dogs')
+    console.log('Deleted Dog ID ', id);
+    
+    // const deletedDog = 
+    await dogService.delete(id)
+    setDogs(dogs.filter(dog => dog.id !== id))
+    // navigate('/profile')
   }
 
   return (
@@ -83,7 +87,7 @@ function App(): JSX.Element {
           path="/profile"
           element={
             <ProtectedRoute user={user}>
-              <Profiles user={user} handleDeleteDog={handleDeleteDog}/>
+              <Profiles user={user} handleDeleteDog={handleDeleteDog} dogs={dogs}/>
             </ProtectedRoute>
           }
         />
@@ -92,6 +96,14 @@ function App(): JSX.Element {
           element={
             <ProtectedRoute user={user}>
               <NewDog user={user} handleAddDog={handleAddDog}/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dogs/:id"
+          element={
+            <ProtectedRoute user={user}>
+              <EditDog user={user} />
             </ProtectedRoute>
           }
         />
