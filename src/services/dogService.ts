@@ -16,17 +16,7 @@ async function getAllDogs(): Promise<Dog[]> {
   }
 }
 
-// async function getMyDogs(): Promise<Dog[]> {
-//   try {
-//     const res = await fetch(BASE_URL, {
-//       headers: { 'Authorization': `Bearer ${tokenService.getToken()}` },
-//     })
-//     return await res.json() as Dog[]
-//   } catch (error) {
-//     console.log(error);
-//     throw error
-//   }
-// }
+
 
 export { 
   getAllDogs,

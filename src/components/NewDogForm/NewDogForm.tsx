@@ -10,7 +10,7 @@ interface NewDogFormProps {
 const NewDogForm = (props: NewDogFormProps): JSX.Element => {
   const { user } = props
 
-  const [formData, setFormData] = useState<NewDogFormData>({
+  const [form, setForm] = useState<NewDogFormData>({
     name: '',
     age: null,
     breed: '',
@@ -18,17 +18,28 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
   })
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({...formData, [evt.target.name]: evt.target.value})
+    setForm({...form, [evt.target.name]: evt.target.value})
   }
 
-  // const handleSubmit = (evt: React.ChangeEvent<HTMLButtonElement>) => {
-  //   evt.preventDefault()
-  //   handleAddDog(form)
-  // }
+  const handleSubmit = (evt: React.ChangeEvent<HTMLButtonElement>) => {
+    evt.preventDefault()
+    handleAddDog(form)
+  }
 
   return (
     <>
       <h2>Form</h2>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="dogname-input">Name:</label>
+        <input type="text" id="dogname-input" name="name" value={form.name} onChange={handleChange} autoComplete='off'/>
+        <label htmlFor="age-input">Age:</label>
+        <input type="number" id="age-input" name="age" value={form.age} onChange={handleChange} autoComplete='off'/>
+        <label htmlFor="breed-input">Breed:</label>
+        <input type="text" id="breed-input" name="breed" value={form.breed} onChange={handleChange} autoComplete='off'/>
+        <label htmlFor="personality-input">Personality, quirks, etc:</label>
+        <input type="text" id="personality-input" name="personality" value={form.personality} onChange={handleChange} autoComplete='off'/>
+        <button type="submit">Add Dog</button>
+      </form>
     </>
   )
 }

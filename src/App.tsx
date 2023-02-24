@@ -53,6 +53,12 @@ function App(): JSX.Element {
     setUser(authService.getUser())
   }
 
+  const handleAddDog = async (dogData) => {
+    const newDog = await dogService.create(dogData)
+    setDogs([newDog, ...dogs])
+    navigate('/dogs')
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
