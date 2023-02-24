@@ -1,5 +1,5 @@
 // npm modules 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 
 // page components
@@ -17,17 +17,31 @@ import NewDog from './pages/NewDog/NewDog'
 
 // services
 import * as authService from './services/authService'
+import * as dogService from './services/dogService'
 
 // stylesheets
 import './App.css'
 
 // types
-import { User } from './types/models'
+import { User, Dog } from './types/models'
 
 function App(): JSX.Element {
   const navigate = useNavigate()
   
   const [user, setUser] = useState<User | null>(authService.getUser())
+  const [dogs, setDogs] = useState<Dog[]>([])
+
+  useEffect((): void => {
+    const fetchDogs = async (): Promise<void> => {
+      try {
+        const dogData: Dog[] = await dogService.getAllDogs()
+        setDogs(dogData)
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchDogs()
+  }, [])
 
   const handleLogout = (): void => {
     authService.logout()
@@ -76,7 +90,7 @@ function App(): JSX.Element {
             </ProtectedRoute>
           }
         />
-        <Route path="/dogs" element={<Dogs />} />
+        <Route path="/dogs" element={<Dogs dogs={dogs}/>} />
       </Routes>
     </>
   )
