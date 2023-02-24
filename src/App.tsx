@@ -13,6 +13,7 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import Dogs from './pages/Dogs/Dogs'
+import NewDog from './pages/NewDog/NewDog'
 
 // services
 import * as authService from './services/authService'
@@ -56,6 +57,14 @@ function App(): JSX.Element {
           element={
             <ProtectedRoute user={user}>
               <Profiles user={user} />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dogs/new"
+          element={
+            <ProtectedRoute user={user}>
+              <NewDog user={user} />
             </ProtectedRoute>
           }
         />

@@ -1,3 +1,5 @@
+import Logo from '../../assets/landing.png'
+
 // stylesheets
 import styles from './Landing.module.css'
 
@@ -15,6 +17,7 @@ const Landing = (props: LandingProps): JSX.Element => {
     <main className={styles.container}>
       <h1>Welcome to Pup-Trainer!</h1>
       <h4>App description</h4>
+      <img src={Logo} alt="dog face" style={{width: '100vw'}}/>
     </main>
   )
 }

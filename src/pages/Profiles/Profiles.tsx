@@ -11,12 +11,12 @@ import { Profile, User, Dog } from '../../types/models'
 import DogCard from '../../components/DogCard/DogCard'
 
 interface ProfilesProps {
-  user: User;
+  user: User | null;
 }
 
 const Profiles = (props: ProfilesProps): JSX.Element => {
   const { user } = props
-  console.log('USER ', user);
+  // console.log('USER ', user);
   
 
   const [profiles, setProfiles] = useState<Profile[]>([])
@@ -35,7 +35,7 @@ const Profiles = (props: ProfilesProps): JSX.Element => {
 
   if(!profiles.length) return <p>No profiles yet</p>
 
-  if(profiles) console.log(profiles)
+  // if(profiles) console.log(profiles)
   
 
   return (
@@ -43,7 +43,7 @@ const Profiles = (props: ProfilesProps): JSX.Element => {
       <h1>My Dogs</h1>
       {profiles.map((profile: Profile) => 
         <div key={profile.id}>
-          {profile.id === user.profile.id 
+          {profile.id === user?.profile.id 
             ? 
               <div>
                 <p>{profile.name}</p>

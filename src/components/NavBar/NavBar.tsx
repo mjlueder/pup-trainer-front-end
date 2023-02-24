@@ -1,3 +1,5 @@
+import Logo from '../../assets/shiba.png'
+
 // npm modules
 import { NavLink } from 'react-router-dom'
 
@@ -16,11 +18,12 @@ const NavBar = (props: NavBarProps): JSX.Element => {
     <nav>
       {user ?
         <ul>
-          {/* <li>Welcome, {user.name}</li> */}
+          <NavLink to="/"><img src={Logo} alt="cartoon shiba" /></NavLink>
           <li><NavLink to="/profile">My Dogs</NavLink></li>
+          <li><NavLink to="/dogs/new">Add a Dog</NavLink></li>
           <li><NavLink to="/dogs">All Dogs</NavLink></li>
           {/* <li><NavLink to="/change-password">Change Password</NavLink></li> */}
-          <li><NavLink to="" onClick={handleLogout}>LOG OUT</NavLink></li>
+          <li><NavLink to="" onClick={handleLogout}>Log Out</NavLink></li>
         </ul>
       :
         <ul>
