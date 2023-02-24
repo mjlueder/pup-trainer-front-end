@@ -1,6 +1,12 @@
 /* ---------==== custom forms ====--------- */
 
-
+export interface NewDogFormData {
+  name: string;
+  age?: number | null;
+  breed?: string;
+  personality?: string;
+  // photo?: string;
+}
 
 /* ---------===== auth forms =====--------- */
 

@@ -2,7 +2,7 @@
 
 export interface Dog {
   name: string;
-  age?: number;
+  age?: number | null;
   breed?: string;
   personality?: string;
   photo?: string;

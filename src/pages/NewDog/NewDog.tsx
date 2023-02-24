@@ -11,12 +11,12 @@ interface NewDogProps {
 import NewDogForm from "../../components/NewDogForm/NewDogForm"
 
 const NewDog = (props: NewDogProps): JSX.Element => {
-  
+  const { user } = props
 
   return (
     <>
       <h1>New Dog Page</h1>
-      <NewDogForm />
+      <NewDogForm user={user}/>
     </>
   )
 }
