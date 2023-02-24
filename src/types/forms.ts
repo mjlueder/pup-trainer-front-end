@@ -1,6 +1,6 @@
 /* ---------==== custom forms ====--------- */
 
-export interface NewDogFormData {
+export interface DogFormData {
   name: string;
   age?: number;
   breed?: string;

@@ -7,3 +7,5 @@ https://stock.adobe.com/search/free?filters%5Bcontent_type%3Aphoto%5D=1&filters%
 paw
 <a href="https://www.flaticon.com/free-icons/paw" title="paw icons">Paw icons created by Freepik - Flaticon</a>
 
+default dog pic
+<a href="https://www.flaticon.com/free-icons/dog-food" title="dog food icons">Dog food icons created by Prashanth Rapolu 15 - Flaticon</a>

@@ -2,11 +2,11 @@ import { useState, useEffect } from "react"
 
 // types
 import { Dog, User } from "../../types/models"
-import { NewDogFormData } from "../../types/forms";
+import { DogFormData } from "../../types/forms";
 
 interface NewDogProps {
   user: User | null;
-  handleAddDog: (form: NewDogFormData) => void;
+  handleAddDog: (form: DogFormData) => void;
 }
 
 //components

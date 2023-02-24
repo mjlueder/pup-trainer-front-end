@@ -7,7 +7,7 @@ export interface Dog {
   personality?: string;
   photo?: string;
   id: number;
-  owner: { id: number };
+  ownerId: { id: number };
 }
 
 /* ---------===== auth models =====--------- */

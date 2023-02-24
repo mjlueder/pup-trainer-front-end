@@ -1,13 +1,23 @@
-//types
-import { Dog } from '../../types/models'
+import { Link } from 'react-router-dom';
 
+import DefaultDog from '../../assets/default-dog.png'
+
+//types
+import { Dog, User } from '../../types/models'
 
 interface DogCardProps {
   dog: Dog;
+  user: User | null;
+  handleDeleteDog: (id: number) => Promise<void>
 }
 
 const DogCard = (props: DogCardProps): JSX.Element => {
-  const { dog } = props
+  const { dog, user, handleDeleteDog } = props
+
+  console.log('USER ', user);
+  console.log('Dog ', dog);
+  
+  
 
   return (
     <>
@@ -18,8 +28,17 @@ const DogCard = (props: DogCardProps): JSX.Element => {
       <h4>{dog.breed}</h4>}
       {dog.personality &&
       <h4>{dog.personality}</h4>}
-      {dog.photo &&
-      <img src={dog.photo} alt={`dog ${dog.name}`} style={{width: '300px'}}/>}
+      {/* {dog.photo && */}
+      <img src={dog.photo ? dog.photo : DefaultDog} alt={`dog ${dog.name}`} style={{width: '300px'}}/>
+      {/* } */}
+      {user?.profile.id === dog.ownerId.id &&
+        <div>
+          <button onClick={() => handleDeleteDog(dog.id)}>Delete</button>
+          <Link to=''>
+            <button>Edit</button>
+          </Link>
+        </div>
+      }
     </>
   )
 }

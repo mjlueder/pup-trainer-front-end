@@ -24,7 +24,7 @@ import './App.css'
 
 // types
 import { User, Dog } from './types/models'
-import { NewDogFormData } from './types/forms'
+import { DogFormData } from './types/forms'
 
 function App(): JSX.Element {
   const navigate = useNavigate()
@@ -54,9 +54,15 @@ function App(): JSX.Element {
     setUser(authService.getUser())
   }
 
-  const handleAddDog = async (dogData: NewDogFormData): Promise<void> => {
+  const handleAddDog = async (dogData: DogFormData): Promise<void> => {
     const newDog = await dogService.create(dogData)
     setDogs([newDog, ...dogs])
+    navigate('/dogs')
+  }
+
+  const handleDeleteDog = async (id: number): Promise<void> => {
+    const deletedDog = await dogService.delete(id)
+    setDogs(dogs.filter(dog => dog.id !== deletedDog.id))
     navigate('/dogs')
   }
 
@@ -77,7 +83,7 @@ function App(): JSX.Element {
           path="/profile"
           element={
             <ProtectedRoute user={user}>
-              <Profiles user={user} />
+              <Profiles user={user} handleDeleteDog={handleDeleteDog}/>
             </ProtectedRoute>
           }
         />
@@ -97,7 +103,7 @@ function App(): JSX.Element {
             </ProtectedRoute>
           }
         />
-        <Route path="/dogs" element={<Dogs dogs={dogs}/>} />
+        <Route path="/dogs" element={<Dogs dogs={dogs} user={user}/>}/>
       </Routes>
     </>
   )

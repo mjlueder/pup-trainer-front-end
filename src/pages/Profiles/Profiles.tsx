@@ -12,10 +12,11 @@ import DogCard from '../../components/DogCard/DogCard'
 
 interface ProfilesProps {
   user: User | null;
+  handleDeleteDog: () => Promise<void>;
 }
 
 const Profiles = (props: ProfilesProps): JSX.Element => {
-  const { user } = props
+  const { user, handleDeleteDog } = props
   // console.log('USER ', user);
   
 
@@ -51,7 +52,7 @@ const Profiles = (props: ProfilesProps): JSX.Element => {
                 <img src={profile.photo} alt={`${profile.name}'s avatar`} style={{width: '200px'}}/>
                 }
                 {profile.dogs?.map((dog: Dog) => (
-                  < DogCard key={dog.id} dog={dog}/>
+                  < DogCard key={dog.id} dog={dog} handleDeleteDog={handleDeleteDog}/>
                 ))}
               </div>
             : <></>
