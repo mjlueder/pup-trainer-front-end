@@ -2,17 +2,19 @@ import { useState } from "react"
 
 //types
 import { NewDogFormData } from "../../types/forms"
+import { User } from "../../types/models";
 
 interface NewDogFormProps {
   user: User | null;
+  handleAddDog: (form: NewDogFormData) => void;
 }
 
 const NewDogForm = (props: NewDogFormProps): JSX.Element => {
-  const { user } = props
+  const { user, handleAddDog } = props
 
   const [form, setForm] = useState<NewDogFormData>({
     name: '',
-    age: null,
+    age: 0,
     breed: '',
     personality: ''
   })

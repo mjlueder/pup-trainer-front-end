@@ -16,9 +16,23 @@ async function getAllDogs(): Promise<Dog[]> {
   }
 }
 
-
+const create = async (dogData) => {
+  try {
+    const res = await fetch(BASE_URL, {
+      method: 'POST', 
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(dogData)
+    })
+    return res.json()
+  } catch (error) {
+    throw error
+  }
+}
 
 export { 
   getAllDogs,
-
+  create,
 }

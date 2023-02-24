@@ -24,6 +24,7 @@ import './App.css'
 
 // types
 import { User, Dog } from './types/models'
+import { NewDogFormData } from './types/forms'
 
 function App(): JSX.Element {
   const navigate = useNavigate()
@@ -53,7 +54,7 @@ function App(): JSX.Element {
     setUser(authService.getUser())
   }
 
-  const handleAddDog = async (dogData) => {
+  const handleAddDog = async (dogData: NewDogFormData): Promise<void> => {
     const newDog = await dogService.create(dogData)
     setDogs([newDog, ...dogs])
     navigate('/dogs')
@@ -84,7 +85,7 @@ function App(): JSX.Element {
           path="/dogs/new"
           element={
             <ProtectedRoute user={user}>
-              <NewDog user={user} />
+              <NewDog user={user} handleAddDog={handleAddDog}/>
             </ProtectedRoute>
           }
         />
