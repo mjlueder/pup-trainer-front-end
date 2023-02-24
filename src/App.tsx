@@ -103,7 +103,7 @@ function App(): JSX.Element {
             </ProtectedRoute>
           }
         />
-        <Route path="/dogs" element={<Dogs dogs={dogs} user={user}/>}/>
+        <Route path="/dogs" element={<Dogs dogs={dogs} user={user} handleDeleteDog={handleDeleteDog}/>}/>
       </Routes>
     </>
   )
