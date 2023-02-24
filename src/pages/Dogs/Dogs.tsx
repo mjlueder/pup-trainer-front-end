@@ -22,7 +22,7 @@ const Dogs = (): JSX.Element => {
       }
     }
     fetchDogs()
-  })
+  }, [])
 
   return (
     <>

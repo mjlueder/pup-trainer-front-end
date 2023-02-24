@@ -52,10 +52,10 @@ function App(): JSX.Element {
           element={<Login handleAuthEvt={handleAuthEvt} />}
         />
         <Route
-          path="/profiles"
+          path="/profile"
           element={
             <ProtectedRoute user={user}>
-              <Profiles />
+              <Profiles user={user} />
             </ProtectedRoute>
           }
         />

@@ -5,9 +5,20 @@ import { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
 
 // types
-import { Profile } from '../../types/models'
+import { Profile, User, Dog } from '../../types/models'
 
-const Profiles = (): JSX.Element => {
+// components
+import DogCard from '../../components/DogCard/DogCard'
+
+interface ProfilesProps {
+  user: User;
+}
+
+const Profiles = (props: ProfilesProps): JSX.Element => {
+  const { user } = props
+  console.log('USER ', user);
+  
+
   const [profiles, setProfiles] = useState<Profile[]>([])
 
   useEffect((): void => {
@@ -24,11 +35,29 @@ const Profiles = (): JSX.Element => {
 
   if(!profiles.length) return <p>No profiles yet</p>
 
+  if(profiles) console.log(profiles)
+  
+
   return (
     <>
-      <h1>Hello. This is a list of all the profiles.</h1>
-      {profiles.map((profile: Profile) =>
-        <p key={profile.id}>{profile.name}</p>
+      <h1>My Dogs</h1>
+      {profiles.map((profile: Profile) => 
+        <div key={profile.id}>
+          {profile.id === user.profile.id 
+            ? 
+              <div>
+                <p>{profile.name}</p>
+                {profile.photo &&
+                <img src={profile.photo} alt={`${profile.name}'s avatar`} style={{width: '200px'}}/>
+                }
+                {profile.dogs?.map((dog: Dog) => (
+                  < DogCard key={dog.id} dog={dog}/>
+                ))}
+              </div>
+            : <></>
+            
+          }
+        </div>
       )}
     </>
   )

@@ -18,6 +18,7 @@ export interface Profile {
   id: number;
   createdAt: string;
   updatedAt: string;
+  dogs?: Dog[]; 
 }
 
 export interface User {

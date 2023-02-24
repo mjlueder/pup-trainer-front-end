@@ -13,7 +13,7 @@ const DogCard = (props: DogCardProps): JSX.Element => {
     <>
       <h2>{dog.name}</h2>
       {dog.age &&
-      <h4>{dog.age} year(s) old</h4>}
+      <h4>{dog.age} year old</h4>}
       {dog.breed &&
       <h4>{dog.breed}</h4>}
       {dog.personality &&
