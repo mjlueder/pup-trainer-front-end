@@ -24,6 +24,8 @@ const EditDogForm = (props: EditDogFormProps): JSX.Element => {
     ownerId: state.ownerId,
   })
 
+  const personalityLength: number | undefined = form.personality?.length
+
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     setForm({...form, [evt.target.name]: evt.target.value})
   }
@@ -43,7 +45,9 @@ const EditDogForm = (props: EditDogFormProps): JSX.Element => {
         <label htmlFor="breed-input">Breed:</label>
         <input type="text" id="breed-input" name="breed" value={form.breed} onChange={handleChange} autoComplete='off'/>
         <label htmlFor="personality-input">Personality, quirks, etc:</label>
-        <input type="textarea" id="personality-input" name="personality" value={form.personality} onChange={handleChange} autoComplete='off'/>
+        <textarea type="text" id="personality-input" name="personality" value={form.personality} onChange={handleChange} autoComplete='off' maxLength={1234}/>
+        {personalityLength > 800 &&
+        <p>{1234-personalityLength}/1234 characters left</p>}
         <button type="submit">Update Dog</button>
       </form>
     </>

@@ -2,10 +2,9 @@
 
 export interface DogFormData {
   name: string;
-  age?: string;
-  breed?: string;
-  personality?: string;
-  // photo?: string;
+  age: string;
+  breed: string;
+  personality: string;
 }
 
 /* ---------===== auth forms =====--------- */
