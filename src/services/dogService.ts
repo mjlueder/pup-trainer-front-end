@@ -63,9 +63,35 @@ const update = async (dogData: Dog): Promise<Dog> => {
   }
 }
 
+const addPic = async (dogData, photo) => {
+  if (photo) {
+    const photoData = new FormData()
+    photoData.append('photo', photo)
+    return await addPhoto(
+      photoData,
+      dogData.id
+    )
+  }
+  else{
+    return dogData
+  }
+}
+
+async function addPhoto(photoData, id) {
+  const res = await fetch(`${BASE_URL}/${id}/add-photo`, {
+    method: 'PUT',
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`
+    },
+    body: photoData
+  })
+  return await res.json()
+}
+
 export { 
   getAllDogs,
   create,
   deleteDog as delete,
-  update
+  update,
+  addPic
 }

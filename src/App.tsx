@@ -55,8 +55,9 @@ function App(): JSX.Element {
     setUser(authService.getUser())
   }
 
-  const handleAddDog = async (dogData: DogFormData): Promise<void> => {
+  const handleAddDog = async (dogData: DogFormData, photo): Promise<void> => {
     const newDog = await dogService.create(dogData)
+    const newDogWithPhoto = await dogService.addPic(newDog, photo)
     setDogs([newDog, ...dogs])
     navigate('/profile')
   }
