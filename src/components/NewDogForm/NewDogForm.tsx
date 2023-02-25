@@ -20,7 +20,7 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
   // const [photoChanged, setPhotoChanged] = useState(false)
   const [form, setForm] = useState<DogFormData>({
     name: '',
-    age: '',
+    age: 0,
     breed: '',
     personality: ''
   })
@@ -37,7 +37,6 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
   const handleSubmit = (evt: React.ChangeEvent<HTMLFormElement>) => {
     evt.preventDefault()
     handleAddDog(form, photoData.photo)
-    // console.log('HandleSubmit photoData.photo ', photoData.photo);
   }
 
   return (

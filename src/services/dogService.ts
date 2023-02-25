@@ -46,8 +46,6 @@ const deleteDog = async (id: number): Promise<Dog> => {
 }
 
 const update = async (dogData: Dog): Promise<Dog> => {
-  console.log('DogData ', dogData);
-  
   try {
     const res = await fetch(`${BASE_URL}/${dogData.id}`, {
       method: 'PUT', 

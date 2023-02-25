@@ -63,7 +63,6 @@ function App(): JSX.Element {
   }
 
   const handleDeleteDog = async (id: number): Promise<void> => {
-    console.log('Deleted Dog ID ', id);
     await dogService.delete(id)
     setDogs(dogs.filter(dog => dog.id !== id))
     // navigate('/profile')

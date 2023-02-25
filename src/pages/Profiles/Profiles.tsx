@@ -21,9 +21,7 @@ interface ProfilesProps {
 
 const Profiles = (props: ProfilesProps): JSX.Element => {
   const { user, handleDeleteDog, dogs } = props
-  // console.log('USER ', user);
   
-
   const [profiles, setProfiles] = useState<Profile[]>([])
 
 

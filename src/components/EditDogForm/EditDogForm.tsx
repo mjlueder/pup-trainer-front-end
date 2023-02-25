@@ -12,13 +12,12 @@ interface EditDogFormProps {
 
 const EditDogForm = (props: EditDogFormProps): JSX.Element => {
   const { state } = useLocation()
-  console.log('Dog? state ', state);
   
   const { user, handleUpdateDog } = props
 
   const [form, setForm] = useState<Dog>({
     name: state.name,
-    age: state.age || '',
+    age: state.age || 0,
     breed: state.breed || '',
     personality: state.personality || '',
     id: state.id,
