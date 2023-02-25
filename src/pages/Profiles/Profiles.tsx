@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 
 // npm packages
 import { useState, useEffect } from 'react'
+// import { useLocation } from 'react-router-dom'
 
 // services
 import * as profileService from '../../services/profileService'
@@ -59,7 +60,7 @@ const Profiles = (props: ProfilesProps): JSX.Element => {
                     {user?.profile.id === dog.ownerId &&
                       <div>
                         <button onClick={() => handleDeleteDog(dog.id)}>Remove Dog</button>
-                        <Link to={`/dogs/${dog.id}`}>
+                        <Link to={`/dogs/${dog.id}/edit`} state={dog}>
                           <button>Edit Dog</button>
                         </Link>
                       </div>

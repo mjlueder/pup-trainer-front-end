@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useLocation } from "react-router";
 
 //types
 import { DogFormData } from "../../types/forms"
@@ -10,13 +11,16 @@ interface EditDogFormProps {
 }
 
 const EditDogForm = (props: EditDogFormProps): JSX.Element => {
-  const { user, } = props
+  const { state } = useLocation()
+  console.log('Dog? state ', state);
+  
+  const { user } = props
 
   const [form, setForm] = useState<DogFormData>({
-    // name: '',
-    // age: 0,
-    // breed: '',
-    // personality: ''
+    name: state.name,
+    age: state.age,
+    breed: state.breed,
+    personality: state.personality,
   })
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {

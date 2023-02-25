@@ -100,7 +100,7 @@ function App(): JSX.Element {
           }
         />
         <Route
-          path="/dogs/:id"
+          path="/dogs/:id/edit"
           element={
             <ProtectedRoute user={user}>
               <EditDog user={user} />
