@@ -17,7 +17,7 @@ const EditDogForm = (props: EditDogFormProps): JSX.Element => {
 
   const [form, setForm] = useState<Dog>({
     name: state.name,
-    age: state.age || 0,
+    age: state.age || '',
     breed: state.breed || '',
     personality: state.personality || '',
     id: state.id,
@@ -43,7 +43,7 @@ const EditDogForm = (props: EditDogFormProps): JSX.Element => {
         <label htmlFor="breed-input">Breed:</label>
         <input type="text" id="breed-input" name="breed" value={form.breed} onChange={handleChange} autoComplete='off'/>
         <label htmlFor="personality-input">Personality, quirks, etc:</label>
-        <input type="text" id="personality-input" name="personality" value={form.personality} onChange={handleChange} autoComplete='off'/>
+        <input type="textarea" id="personality-input" name="personality" value={form.personality} onChange={handleChange} autoComplete='off'/>
         <button type="submit">Update Dog</button>
       </form>
     </>
