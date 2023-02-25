@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 
+import styles from './Profiles.module.css'
+
 // npm packages
 import { useState, useEffect } from 'react'
 // import { useLocation } from 'react-router-dom'
@@ -41,37 +43,41 @@ const Profiles = (props: ProfilesProps): JSX.Element => {
   
 
   return (
-    <>
-      <h1>My Dogs</h1>
+    <main >
       {profiles.map((profile: Profile) => 
         <div key={profile.id}>
           {profile.id === user?.profile.id 
             ? 
-              <div>
+            <div>
+              <div className={styles.profile}>
                 <p>{profile.name}</p>
                 {profile.photo &&
                 <img src={profile.photo} alt={`${profile.name}'s avatar`} style={{width: '200px'}}/>
                 }
-                {profile.dogs?.map((dog: Dog) => (
-                  <>
-                    < DogCard key={dog.id} user={user} dog={dog} handleDeleteDog={handleDeleteDog}/>
-                    {user?.profile.id === dog.ownerId &&
-                      <div>
-                        <button onClick={() => handleDeleteDog(dog.id)}>Remove Dog</button>
-                        <Link to={`/dogs/${dog.id}/edit`} state={dog}>
-                          <button>Edit Dog</button>
-                        </Link>
-                      </div>
-                    }
-                  </>
-                ))}
+              </div>
+              <h1>My Dogs</h1>
+                <div className={styles.dogList}>
+                  {profile.dogs?.map((dog: Dog) => (
+                    <div className={styles.dogCard}>
+                      < DogCard key={dog.id} user={user} dog={dog} handleDeleteDog={handleDeleteDog}/>
+                      {user?.profile.id === dog.ownerId &&
+                        <div>
+                          <button onClick={() => handleDeleteDog(dog.id)}>Remove Dog</button>
+                          <Link to={`/dogs/${dog.id}/edit`} state={dog}>
+                            <button>Edit Dog</button>
+                          </Link>
+                        </div>
+                      }
+                    </div>
+                  ))}
+                </div>
               </div>
             : <></>
             
           }
         </div>
       )}
-    </>
+    </main>
   )
 }
  

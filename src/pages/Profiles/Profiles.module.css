@@ -1,0 +1,15 @@
+.dogList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.dogCard {
+  display: flex;
+  flex-direction: column;
+  margin: 10vh;
+}
+
+.profile {
+  display: flex;
+}

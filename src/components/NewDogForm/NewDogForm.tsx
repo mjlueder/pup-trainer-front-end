@@ -30,7 +30,7 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
   }
 
   const handleChangePhoto = (evt: React.ChangeEvent<HTMLInputElement>) => {
-    setPhotoData({ photo: evt.target.files[0] })
+    if (evt.target.files) setPhotoData({ photo: evt.target.files[0] })
     // setPhotoChanged(true)
   }
 

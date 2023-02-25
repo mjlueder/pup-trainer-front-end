@@ -1,0 +1,27 @@
+.nav {
+  background-color: white;
+  height: 10vh;
+}
+
+.components {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.components a {
+  color: black;
+}
+.components a:visited {
+  color: black;
+}
+
+.paws {
+  height: 9vh;
+}
+
+.dogLinks {
+  display: flex;
+}
+
