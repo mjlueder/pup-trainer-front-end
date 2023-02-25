@@ -20,7 +20,7 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
   // const [photoChanged, setPhotoChanged] = useState(false)
   const [form, setForm] = useState<DogFormData>({
     name: '',
-    age: 0,
+    age: '',
     breed: '',
     personality: ''
   })
@@ -45,9 +45,17 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
       <h2>Form</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="dogname-input">Name:</label>
-        <input type="text" id="dogname-input" name="name" value={form.name} onChange={handleChange} autoComplete='off'/>
+        <input 
+          type="text" 
+          id="dogname-input" 
+          name="name" 
+          value={form.name} 
+          onChange={handleChange} 
+          autoComplete='off' 
+          required
+        />
         <label htmlFor="age-input">Age:</label>
-        <input type="number" id="age-input" name="age" value={form.age} onChange={handleChange} autoComplete='off'/>
+        <input type="text" id="age-input" name="age" value={form.age} onChange={handleChange} autoComplete='off'/>
         <label htmlFor="breed-input">Breed:</label>
         <input type="text" id="breed-input" name="breed" value={form.breed} onChange={handleChange} autoComplete='off'/>
         <label htmlFor="personality-input">Personality, quirks, etc:</label>

@@ -2,7 +2,7 @@
 
 export interface DogFormData {
   name: string;
-  age?: number;
+  age?: string;
   breed?: string;
   personality?: string;
   // photo?: string;
