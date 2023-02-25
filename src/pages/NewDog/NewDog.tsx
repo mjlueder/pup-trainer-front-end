@@ -6,7 +6,7 @@ import { DogFormData } from "../../types/forms";
 
 interface NewDogProps {
   user: User | null;
-  handleAddDog: (form: DogFormData) => void;
+  handleAddDog: (form: DogFormData, photo: File | null) => void;
 }
 
 //components

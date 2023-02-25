@@ -6,17 +6,17 @@ import { User } from "../../types/models";
 
 interface NewDogFormProps {
   user: User | null;
-  handleAddDog: (form: DogFormData) => void;
+  handleAddDog: (form: DogFormData, photo: File | null) => void;
 }
 
-interface Photo {
-  photo: File | null;
-}
+// interface Photo {
+//   photo: File | null;
+// }
 
 const NewDogForm = (props: NewDogFormProps): JSX.Element => {
   const { user, handleAddDog } = props
 
-  const [photoData, setPhotoData] = useState<Photo>({})
+  const [photoData, setPhotoData] = useState<object>({})
   // const [photoChanged, setPhotoChanged] = useState(false)
   const [form, setForm] = useState<DogFormData>({
     name: '',
@@ -37,7 +37,7 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
   const handleSubmit = (evt: React.ChangeEvent<HTMLFormElement>) => {
     evt.preventDefault()
     handleAddDog(form, photoData.photo)
-    console.log('HandleSubmit photoData.photo ', photoData.photo);
+    // console.log('HandleSubmit photoData.photo ', photoData.photo);
   }
 
   return (

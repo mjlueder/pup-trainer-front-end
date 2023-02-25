@@ -63,7 +63,7 @@ const update = async (dogData: Dog): Promise<Dog> => {
   }
 }
 
-const addPic = async (dogData, photo) => {
+const addPic = async (dogData: Dog, photo: File | null) => {
   if (photo) {
     const photoData = new FormData()
     photoData.append('photo', photo)
@@ -77,7 +77,7 @@ const addPic = async (dogData, photo) => {
   }
 }
 
-async function addPhoto(photoData, id) {
+async function addPhoto(photoData: FormData, id: number) {
   const res = await fetch(`${BASE_URL}/${id}/add-photo`, {
     method: 'PUT',
     headers: {
