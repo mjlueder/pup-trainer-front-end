@@ -3,24 +3,26 @@ import { useLocation } from "react-router";
 
 //types
 import { DogFormData } from "../../types/forms"
-import { User } from "../../types/models";
+import { User, Dog } from "../../types/models";
 
 interface EditDogFormProps {
   user: User | null;
-  // handleAddDog: (form: DogFormData) => void;
+  handleUpdateDog: (data: Dog) => Promise<void>
 }
 
 const EditDogForm = (props: EditDogFormProps): JSX.Element => {
   const { state } = useLocation()
   console.log('Dog? state ', state);
   
-  const { user } = props
+  const { user, handleUpdateDog } = props
 
-  const [form, setForm] = useState<DogFormData>({
+  const [form, setForm] = useState<Dog>({
     name: state.name,
-    age: state.age,
-    breed: state.breed,
-    personality: state.personality,
+    age: state.age || 0,
+    breed: state.breed || '',
+    personality: state.personality || '',
+    id: state.id,
+    ownerId: state.ownerId,
   })
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,7 +31,7 @@ const EditDogForm = (props: EditDogFormProps): JSX.Element => {
 
   const handleSubmit = (evt: React.ChangeEvent<HTMLFormElement>) => {
     evt.preventDefault()
-    // handleAddDog(form)
+    handleUpdateDog(form)
   }
   return (
     <>
@@ -38,12 +40,12 @@ const EditDogForm = (props: EditDogFormProps): JSX.Element => {
         <label htmlFor="dogname-input">Name:</label>
         <input type="text" id="dogname-input" name="name" value={form.name} onChange={handleChange} autoComplete='off'/>
         <label htmlFor="age-input">Age:</label>
-        <input type="number" id="age-input" name="age" value={form.age} onChange={handleChange} autoComplete='off'/>
+        <input type="number" id="age-input" name="age" value={form.age?.toString()} onChange={handleChange} autoComplete='off'/>
         <label htmlFor="breed-input">Breed:</label>
         <input type="text" id="breed-input" name="breed" value={form.breed} onChange={handleChange} autoComplete='off'/>
         <label htmlFor="personality-input">Personality, quirks, etc:</label>
         <input type="text" id="personality-input" name="personality" value={form.personality} onChange={handleChange} autoComplete='off'/>
-        <button type="submit">Add Dog</button>
+        <button type="submit">Update Dog</button>
       </form>
     </>
   )

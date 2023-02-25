@@ -1,20 +1,22 @@
 //types
-import { User } from "../../types/models";
+import { User, Dog } from "../../types/models";
 
 interface EditDogProps {
   user: User | null;
+  handleUpdateDog: (data: Dog) => Promise<void>
 }
 
 // components
 import EditDogForm from "../../components/EditDogForm/EditDogForm"
+import { DogFormData } from "../../types/forms";
 
 const EditDog = (props: EditDogProps): JSX.Element => {
-  const { user } = props
+  const { user, handleUpdateDog } = props
 
   return (
     <>
       <h1>Edit Dog Page</h1>
-      <EditDogForm />
+      <EditDogForm user={user} handleUpdateDog={handleUpdateDog}/>
     </>
   )
 }

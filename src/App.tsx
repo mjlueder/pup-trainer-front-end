@@ -63,11 +63,15 @@ function App(): JSX.Element {
 
   const handleDeleteDog = async (id: number): Promise<void> => {
     console.log('Deleted Dog ID ', id);
-    
-    // const deletedDog = 
     await dogService.delete(id)
     setDogs(dogs.filter(dog => dog.id !== id))
     // navigate('/profile')
+  }
+
+  const handleUpdateDog = async (dogData: Dog): Promise<void> => {
+    const updatedDog = await dogService.update(dogData)
+    setDogs(dogs.map((d) => dogData.id === d.id ? updatedDog : d))
+    navigate('/profile')
   }
 
   return (
@@ -103,7 +107,7 @@ function App(): JSX.Element {
           path="/dogs/:id/edit"
           element={
             <ProtectedRoute user={user}>
-              <EditDog user={user} />
+              <EditDog user={user} handleUpdateDog={handleUpdateDog}/>
             </ProtectedRoute>
           }
         />

@@ -45,8 +45,27 @@ const deleteDog = async (id: number): Promise<Dog> => {
   }
 }
 
+const update = async (dogData: Dog): Promise<Dog> => {
+  console.log('DogData ', dogData);
+  
+  try {
+    const res = await fetch(`${BASE_URL}/${dogData.id}`, {
+      method: 'PUT', 
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(dogData)
+    })
+    return res.json()
+  } catch (error) {
+    throw error
+  }
+}
+
 export { 
   getAllDogs,
   create,
   deleteDog as delete,
+  update
 }
