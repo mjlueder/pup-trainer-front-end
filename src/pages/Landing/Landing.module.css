@@ -6,3 +6,44 @@
   flex-direction: column;
   /* background-image: url('/src/assets/landing.png'); */
 }
+
+.img {
+  position: fixed;
+  bottom: 0;
+  max-width: 100vw;
+  height: auto;
+  max-height: 50vh;
+  width: auto;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title > h1 {
+  color: rgb(250, 250, 250, 0.8);
+  font-family: 'Poppins', sans-serif;
+  font-size: 65px;
+  margin: 30px 10px;
+}
+
+.title > img {
+  width: 85px;
+  margin-top: 25px;
+}
+
+.description {
+  color: rgb(250, 250, 250, 0.8);
+  margin: 2vh 10vw;
+  text-align: center;
+}
+
+.slogan {
+  color: rgb(250, 250, 250, 0.8);
+  margin: 0 10vw;
+  text-align: center;
+  font-size: 38px;
+  font-family: 'League Script', cursive;
+}

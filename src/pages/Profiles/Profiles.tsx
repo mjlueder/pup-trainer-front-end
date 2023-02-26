@@ -58,10 +58,10 @@ const Profiles = (props: ProfilesProps): JSX.Element => {
               <h1>My Dogs</h1>
                 <div className={styles.dogList}>
                   {profile.dogs?.map((dog: Dog) => (
-                    <div className={styles.dogCard}>
-                      < DogCard key={dog.id} user={user} dog={dog} handleDeleteDog={handleDeleteDog}/>
+                    <div key={dog.id} className={styles.dogCard}>
+                      < DogCard  user={user} dog={dog} handleDeleteDog={handleDeleteDog}/>
                       {user?.profile.id === dog.ownerId &&
-                        <div>
+                        <div className={styles.buttons}>
                           <button onClick={() => handleDeleteDog(dog.id)}>Remove Dog</button>
                           <Link to={`/dogs/${dog.id}/edit`} state={dog}>
                             <button>Edit Dog</button>

@@ -17,15 +17,21 @@ const DogCard = (props: DogCardProps): JSX.Element => {
   const { dog, user, handleDeleteDog } = props
 
   return (
-    <div >
-      <h2>{dog.name}</h2>
-      {dog.age &&
-      <h4>{dog.age} year(s) old</h4>}
-      {dog.breed &&
-      <h4>{dog.breed}</h4>}
-      {dog.personality &&
-      <h4>About Me: {dog.personality}</h4>}
-      <img src={dog.photo ? dog.photo : DefaultDog} alt={`dog ${dog.name}`} style={{width: '300px'}}/>
+    <div className={styles.card} >
+      <div className={styles.deets}>
+        <h2>{dog.name}</h2>
+        {dog.age &&
+        <h4>{dog.age} year(s) old</h4>}
+        {dog.breed &&
+        <h4>{dog.breed}</h4>}
+        {dog.personality &&
+        <h4>About Me: {dog.personality}</h4>}
+      </div>
+      <img 
+        src={dog.photo ? dog.photo : DefaultDog} 
+        className={styles.img}
+        alt={`dog ${dog.name}`} 
+      />
     </div>
   )
 }

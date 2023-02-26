@@ -2,14 +2,24 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .dogCard {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 10vh;
 }
 
 .profile {
   display: flex;
+  justify-content: end;
+}
+
+.buttons {
+  text-align: center;
+  justify-self: start;
 }

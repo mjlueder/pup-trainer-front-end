@@ -1,0 +1,17 @@
+.formDiv  {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 80%;
+  grid-gap: 8px;
+  padding: 8px;
+}
+
+.formDiv input, textarea {
+  width: 90%;
+  /* max-width: 250px; */
+  padding: 4px 8px;
+  /* font-family: "Manrope"; */
+  outline: 0;
+  border: 1px solid hsla(254, 35%, 43%, 0.408);
+  border-radius: 4px;
+}

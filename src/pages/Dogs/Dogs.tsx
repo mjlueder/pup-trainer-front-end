@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 
-//services
-
+import styles from './Dogs.module.css'
 
 // types
 import { Dog, User } from '../../types/models';
@@ -21,10 +20,13 @@ const Dogs = (props: DogsProps): JSX.Element => {
   return (
     <>
       <h1>cute dogs!</h1>
-      {dogs.map((dog) => (
-        // <h3 key={dog.id}>{dog.name}</h3>
-        <DogCard key={dog.id} dog={dog} user={user} handleDeleteDog={handleDeleteDog}/>
-      ))}
+      <div className={styles.dogList}>
+        {dogs.map((dog, idx) => (
+          <div key={dog.id} className={styles.dog}>
+            <DogCard  dog={dog} user={user} handleDeleteDog={handleDeleteDog}/>
+          </div>
+        ))}
+      </div>
     </>
   )
 }

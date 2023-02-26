@@ -1,5 +1,6 @@
 import { useState } from "react"
 
+import styles from './NewDogForm.module.css'
 //types
 import { DogFormData } from "../../types/forms"
 import { User } from "../../types/models";
@@ -44,7 +45,7 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
   return (
     <>
       <h2>Form</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={styles.formDiv}>
         <label htmlFor="dogname-input">Name:</label>
         <input 
           type="text" 
@@ -60,9 +61,11 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
         <label htmlFor="breed-input">Breed:</label>
         <input type="text" id="breed-input" name="breed" value={form.breed} onChange={handleChange} autoComplete='off'/>
         <label htmlFor="personality-input">Personality, quirks, etc:</label>
-        <textarea type="text" id="personality-input" name="personality" value={form.personality} onChange={handleChange} autoComplete='off'/>
-        {personalityLength > 800 &&
-        <p>{1234-personalityLength}/1234 characters left</p>}
+        <div>
+          <textarea type="text" id="personality-input" name="personality" value={form.personality} onChange={handleChange} autoComplete='off'/>
+          {personalityLength > 800 &&
+          <p>{1234-personalityLength}/1234 characters left</p>}
+        </div>
         <label htmlFor="photo-upload">
               Upload Photo:
             </label>
@@ -87,6 +90,7 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
                 onChange={handleChangePhoto}
                 // className={styles.fileUpload}
               />
+        <div></div>
         <button type="submit">Add Dog</button>
       </form>
     </>

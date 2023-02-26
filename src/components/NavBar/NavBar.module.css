@@ -1,6 +1,7 @@
 .nav {
-  background-color: white;
+  background-color: rgb(250, 250, 250, 0.8);
   height: 10vh;
+  top: 0;
 }
 
 .components {
@@ -8,20 +9,28 @@
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .components a {
   color: black;
+  text-decoration: none;
 }
 .components a:visited {
   color: black;
 }
 
-.paws {
-  height: 9vh;
+.icons {
+  height: 8vh;
+  margin: 1.5vh 2.5vh;
 }
 
 .dogLinks {
   display: flex;
+}
+
+.dogLinks li {
+  margin: 10px;
 }
 
