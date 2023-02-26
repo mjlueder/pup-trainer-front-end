@@ -50,6 +50,9 @@ const Profiles = (props: ProfilesProps): JSX.Element => {
             ? 
             <div>
               <div className={styles.profile}>
+                <Link to="/dogs/new">
+                  <button>Add a Dog</button>
+                </Link>
                 <p>{profile.name}</p>
                 {profile.photo &&
                 <img src={profile.photo} alt={`${profile.name}'s avatar`} style={{width: '200px'}}/>

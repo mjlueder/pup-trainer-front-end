@@ -22,17 +22,17 @@ const NavBar = (props: NavBarProps): JSX.Element => {
       {user ?
         <ul className={styles.components}>
           <NavLink to="/">
-            <img src={DogHouse} alt="home button dog house" className={styles.icons}/>
+            <img src={DogHouse} alt="home button dog house" className={styles.homeIcon}/>
           </NavLink>
           <div className={styles.dogLinks}>
             <li><NavLink to="/profile">My Dogs</NavLink></li>
-            <li><NavLink to="/dogs/new">Add a Dog</NavLink></li>
+            {/* <li><NavLink to="/dogs/new">Add a Dog</NavLink></li> */}
             <li><NavLink to="/dogs">All Dogs</NavLink></li>
           </div>
           {/* <li><NavLink to="/change-password">Change Password</NavLink></li> */}
           <li>
             <NavLink to="" onClick={handleLogout}>
-              <img src={Logout} alt="logout icon man and dog walking away" className={styles.icons}/>
+              <img src={Logout} alt="logout icon man and dog walking away" className={styles.logoutIcon}/>
             </NavLink>
           </li>
         </ul>
