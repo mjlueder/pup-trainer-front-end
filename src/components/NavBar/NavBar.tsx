@@ -25,9 +25,16 @@ const NavBar = (props: NavBarProps): JSX.Element => {
             <img src={DogHouse} alt="home button dog house" className={styles.homeIcon}/>
           </NavLink>
           <div className={styles.dogLinks}>
-            <li><NavLink to="/profile">My Dogs</NavLink></li>
+            <li>
+              <NavLink to="/about">About Pup Trainer</NavLink>
+            </li>
+            <li>
+              <NavLink to="/profile">My Dogs</NavLink>
+            </li>
             {/* <li><NavLink to="/dogs/new">Add a Dog</NavLink></li> */}
-            <li><NavLink to="/dogs">All Dogs</NavLink></li>
+            <li>
+              <NavLink to="/dogs">All Dogs</NavLink>
+            </li>
           </div>
           {/* <li><NavLink to="/change-password">Change Password</NavLink></li> */}
           <li>

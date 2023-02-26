@@ -15,6 +15,7 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import Dogs from './pages/Dogs/Dogs'
 import NewDog from './pages/NewDog/NewDog'
 import EditDog from './pages/EditDog/EditDog'
+import About from './pages/About/About'
 
 // services
 import * as authService from './services/authService'
@@ -120,6 +121,7 @@ function App(): JSX.Element {
           }
         />
         <Route path="/dogs" element={<Dogs dogs={dogs} user={user} handleDeleteDog={handleDeleteDog}/>}/>
+        <Route path="/about" element={<About/>}/>
       </Routes>
     </>
   )
