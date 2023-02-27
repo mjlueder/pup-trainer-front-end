@@ -22,7 +22,7 @@ const Landing = (props: LandingProps): JSX.Element => {
         <h1>Trainer</h1>
       </div>
       <h2 className={styles.slogan}>
-        Dog training made simple
+        Dog training, made simple
       </h2>
       <img src={Logo} alt="dog face" className={styles.img}/>
     </main>
