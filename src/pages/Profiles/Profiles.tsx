@@ -39,7 +39,7 @@ const Profiles = (props: ProfilesProps): JSX.Element => {
     fetchProfiles()
   }, [dogs])
 
-  if(!profiles.length) return <p>Loading your profile</p>
+  if(!profiles.length) return <h2>Loading your profile</h2>
   
 
   return (

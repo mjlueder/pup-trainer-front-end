@@ -18,6 +18,7 @@ interface NewDogFormProps {
 const NewDogForm = (props: NewDogFormProps): JSX.Element => {
   const { user, handleAddDog } = props
 
+  const [loading, setLoading] = useState<boolean>(false)
   const [photoData, setPhotoData] = useState<PhotoFormData>({photo: null})
   // const [photoChanged, setPhotoChanged] = useState(false)
   const [form, setForm] = useState<DogFormData>({
@@ -39,6 +40,7 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
   const personalityLength: number = form.personality?.length
   
   const handleSubmit = (evt: React.ChangeEvent<HTMLFormElement>) => {
+    setLoading(true)
     evt.preventDefault()
     handleAddDog(form, photoData.photo)
   }
@@ -94,6 +96,12 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
         <div></div>
         <button type="submit">Add Dog</button>
       </form>
+      <div className={loading ? styles.loading : styles.notLoading}>
+        <h4 className={styles.loadingText}>Loading Dog...</h4>
+        <div className={styles.loader}>
+          <div className={`${styles.justifyContentCenter} ${styles.jimuPrimaryLoading}`}></div>
+        </div>
+      </div>
     </>
   )
 }

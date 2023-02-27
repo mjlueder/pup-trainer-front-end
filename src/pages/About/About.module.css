@@ -1,18 +1,33 @@
 .container {
   color: rgb(250, 250, 250, 0.95);
-  margin: 2vh 0;
+  margin: 0;
   text-align: center;
   font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 .container h4 {
-  margin: 5vh 15vw;
+  margin: 5vh 10vw;
 }
 
 .img {
-  width: 25%;
+  /* width: 19.7%;
+  border: .5px solid rgb(250, 250, 250, 0.95); */
+  /* height: 300px; */
+  width: 20%;
 }
 
 .title {
   font-size: 45px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
 }
