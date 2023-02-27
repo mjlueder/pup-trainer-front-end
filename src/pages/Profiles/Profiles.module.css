@@ -1,23 +1,28 @@
 .dogList {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   /* flex-wrap: wrap; */
   /* justify-content: center; */
-  align-items: center;
+  /* align-items: center; */
 }
 
 .dogCard {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 10vh;
-  width: 65vw;
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin: 8vh 16vw;
+  /* width: 65vw; */
+  min-height: 300px;
 }
 
 .profile {
   display: flex;
-  justify-content: end;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(250, 250, 250, 0.85);
+  font-family: 'Poppins', sans-serif;
+  font-size: 45px;
 }
 
 .buttons {

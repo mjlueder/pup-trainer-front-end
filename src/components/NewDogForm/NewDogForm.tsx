@@ -45,7 +45,7 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
 
   return (
     <>
-      <h2>Form</h2>
+      <h1 className={styles.title}>Add A Dog</h1>
       <form onSubmit={handleSubmit} className={styles.formDiv}>
         <label htmlFor="dogname-input">Name:</label>
         <input 

@@ -17,7 +17,6 @@ const NewDog = (props: NewDogProps): JSX.Element => {
 
   return (
     <>
-      <h1>New Dog Page</h1>
       <NewDogForm user={user} handleAddDog={handleAddDog}/>
     </>
   )

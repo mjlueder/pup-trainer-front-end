@@ -1,7 +1,18 @@
-.text {
-  color: rgb(250, 250, 250, 0.8);
-  margin: 2vh 10vw;
+.container {
+  color: rgb(250, 250, 250, 0.95);
+  margin: 2vh 0;
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
 
+.container h4 {
+  margin: 5vh 15vw;
+}
+
+.img {
+  width: 25%;
+}
+
+.title {
+  font-size: 45px;
+}

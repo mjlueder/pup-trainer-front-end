@@ -50,15 +50,11 @@ const Profiles = (props: ProfilesProps): JSX.Element => {
             ? 
             <div>
               <div className={styles.profile}>
+                <h1>{profile.name}'s Dogs</h1>
                 <Link to="/dogs/new">
                   <button>Add a Dog</button>
                 </Link>
-                <p>{profile.name}</p>
-                {profile.photo &&
-                <img src={profile.photo} alt={`${profile.name}'s avatar`} style={{width: '200px'}}/>
-                }
               </div>
-              <h1>My Dogs</h1>
                 <div className={styles.dogList}>
                   {profile.dogs?.map((dog: Dog) => (
                     <div key={dog.id} className={styles.dogCard}>
