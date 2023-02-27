@@ -7,6 +7,10 @@ export interface DogFormData {
   personality: string;
 }
 
+export interface FormTextData {
+  
+}
+
 /* ---------===== auth forms =====--------- */
 
 export interface LoginFormData {

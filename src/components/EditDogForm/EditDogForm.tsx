@@ -4,6 +4,7 @@ import { useLocation } from "react-router";
 //types
 import { DogFormData } from "../../types/forms"
 import { User, Dog } from "../../types/models";
+// import { PhotoFormData } from "../../types/forms";
 
 interface EditDogFormProps {
   user: User | null;
@@ -45,7 +46,7 @@ const EditDogForm = (props: EditDogFormProps): JSX.Element => {
         <label htmlFor="breed-input">Breed:</label>
         <input type="text" id="breed-input" name="breed" value={form.breed} onChange={handleChange} autoComplete='off'/>
         <label htmlFor="personality-input">Personality, quirks, etc:</label>
-        <textarea type="text" id="personality-input" name="personality" value={form.personality} onChange={handleChange} autoComplete='off' maxLength={1234}/>
+        <input type="text" id="personality-input" name="personality" value={form.personality} onChange={handleChange} autoComplete='off' maxLength={1234}/>
         {personalityLength && (personalityLength > 800 &&
         <p>{1234-personalityLength}/1234 characters left</p>)}
         <button type="submit">Update Dog</button>

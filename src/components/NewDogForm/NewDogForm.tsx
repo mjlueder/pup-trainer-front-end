@@ -4,6 +4,7 @@ import styles from './NewDogForm.module.css'
 //types
 import { DogFormData } from "../../types/forms"
 import { User } from "../../types/models";
+import { PhotoFormData } from "../../types/forms";
 
 interface NewDogFormProps {
   user: User | null;
@@ -17,7 +18,7 @@ interface NewDogFormProps {
 const NewDogForm = (props: NewDogFormProps): JSX.Element => {
   const { user, handleAddDog } = props
 
-  const [photoData, setPhotoData] = useState<object>({})
+  const [photoData, setPhotoData] = useState<PhotoFormData>({photo: null})
   // const [photoChanged, setPhotoChanged] = useState(false)
   const [form, setForm] = useState<DogFormData>({
     name: '',
@@ -62,7 +63,7 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
         <input type="text" id="breed-input" name="breed" value={form.breed} onChange={handleChange} autoComplete='off'/>
         <label htmlFor="personality-input">Personality, quirks, etc:</label>
         <div>
-          <textarea type="text" id="personality-input" name="personality" value={form.personality} onChange={handleChange} autoComplete='off'/>
+          <input type="text" id="personality-input" name="personality" value={form.personality} onChange={handleChange} autoComplete='off'/>
           {personalityLength > 800 &&
           <p>{1234-personalityLength}/1234 characters left</p>}
         </div>
