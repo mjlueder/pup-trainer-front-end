@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 
 import styles from './Profiles.module.css'
 
+import Collar from '../../assets/collar-color.png'
+
 // npm packages
 import { useState, useEffect } from 'react'
 // import { useLocation } from 'react-router-dom'
@@ -39,7 +41,7 @@ const Profiles = (props: ProfilesProps): JSX.Element => {
     fetchProfiles()
   }, [dogs])
 
-  if(!profiles.length) return <h2>Loading your profile</h2>
+  if(!profiles.length) return <h3 className={styles.loadingText}>Loading your profile</h3>
   
 
   return (
@@ -50,7 +52,11 @@ const Profiles = (props: ProfilesProps): JSX.Element => {
             ? 
             <div>
               <div className={styles.profile}>
-                <h1>{profile.name}'s Dogs</h1>
+                <div className={styles.header}>
+                  <h1>{profile.name}'s</h1>
+                  <img src={Collar} alt="dog collar" /> 
+                  <h1>Dogs</h1>
+                </div>
                 <Link to="/dogs/new">
                   <button>Add a Dog</button>
                 </Link>
