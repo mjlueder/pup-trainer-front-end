@@ -7,7 +7,7 @@ const About = (): JSX.Element => {
       <div className={styles.text}>
         <h1>About Pup Trainer</h1>
         <h4>
-          Meet Teddy, the inspiration for Pup Trainer. Teddy was adopted after having a pretty rough life, and he brought a lot of baggage with him. He was very underweight, dealing with injuries from other dogs in the shelter, leash reactive, dog reactive, and with extreme separation and crate anxiety.
+          Meet Teddy, the inspiration for Pup Trainer. Teddy was adopted after having a pretty rough life, and he brought a lot of baggage with him (he was underweight, injured, leash reactive, dog reactive, had significant separation and crate anxiety...)
         </h4>
         <h4>
           Prior to adopting Teddy, I worked as an animal trainer and husbandry professional for more than a decade. Even with so much experience, it was challenging to get a handle on Teddy's behavior. I started looking for additional resources, and found that, while there are many available, it was hard to find <em>good</em> training and management resources in t
