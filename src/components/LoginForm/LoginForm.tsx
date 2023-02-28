@@ -49,9 +49,9 @@ const LoginForm = (props: AuthFormProps): JSX.Element => {
     <form
       autoComplete="off"
       onSubmit={handleSubmit}
-      className={styles.container}
+      className={`${styles.container} ${styles.formDiv}`}
     >
-      <div className={styles.inputContainer}>
+      {/* <div className={styles.inputContainer}> */}
         <label htmlFor="email" className={styles.label}>Email</label>
         <input
           type="text"
@@ -60,8 +60,8 @@ const LoginForm = (props: AuthFormProps): JSX.Element => {
           name="email"
           onChange={handleChange}
         />
-      </div>
-      <div className={styles.inputContainer}>
+      {/* </div>
+      <div className={styles.inputContainer}> */}
         <label htmlFor="password" className={styles.label}>Password</label>
         <input
           type="password"
@@ -70,7 +70,7 @@ const LoginForm = (props: AuthFormProps): JSX.Element => {
           name="password"
           onChange={handleChange}
         />
-      </div>
+      <div></div> 
       <div>
         <button disabled={isFormInvalid()} className={styles.button}>
           Log In

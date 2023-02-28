@@ -32,17 +32,7 @@
 .resources a {
   font-size: 24px;
   font-weight: 600;
-  color: rgb(0, 200, 255, 0.75);
-  color: #fc8013;
-  color: #4b5dff;
-  color: #14c4af;
-  color: #fac233;
   text-decoration: none;
-}
-
-.resources a:visited {
-  color: rgb(0, 208, 255);
-  /* color: #fac233; */
 }
 
 .aLink a {
@@ -63,10 +53,7 @@
 
 .resources li {
   list-style-type: "🐾";
+  list-style: circle;
   padding: 0 0 0 10px;
-}
-
-.resources li::marker {
-  /* padding: 20rem; */
 }
 

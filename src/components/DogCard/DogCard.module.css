@@ -9,20 +9,28 @@
   max-height: 440px;
 }
 
-.deets {
+.text {
   margin: 15px;
   width: 50%;
+  color: rgb(0, 0, 0, 0.85);
 }
 
 .img {
   margin: 15px;
-  width: 50%;
-  /* max-height: 90%; */
+  width: auto;
+  max-width: 47%;
   border: 1px solid rgb(0, 0, 0, .6);
-  margin: 20px;
+  margin: 20px 20px 20px 0;
   border-radius: 4px;
 }
 
-.deets > h2 {
+.name {
   text-align: center;
+  font-size: 42px;
+  margin: 25px 0;
+}
+
+.details {
+  font-size: 22px;
+  margin: 0 20px;
 }
