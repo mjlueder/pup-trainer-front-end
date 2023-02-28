@@ -1,8 +1,15 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .formDiv  {
   display: grid;
-  grid-template-columns: 40% 60%;
-  width: 80%;
-  grid-gap: 8px;
+  grid-template-columns: 35% 65%;
+  width: 70%;
+  grid-gap: 24px;
   padding: 8px;
   font-family: 'Poppins', sans-serif;
   color: rgb(250, 250, 250, 0.95);
@@ -13,15 +20,25 @@
   color: rgb(250, 250, 250, 0.95);
 }
 
-.formDiv input, textarea {
-  width: 90%;
-  /* max-width: 250px; */
-  padding: 4px 8px;
-  /* font-family: "Manrope"; */
+.submit {
+  margin: 0;
+  width: 25%;
+  font-size: 18px;
+}
+
+.formDiv input {
+  padding: 8px 16px;
   outline: 0;
   border: 1px solid hsla(254, 35%, 43%, 0.408);
   border-radius: 4px;
   font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  background-color: rgb(182, 204, 227);
+}
+
+.formDiv label {
+  font-weight: 600;
+  font-size: 22px;
 }
 
 .loadingText {
@@ -29,8 +46,9 @@
   color: rgb(250, 250, 250, 0.95);
 }
 
-.loading {
-  
+.personality {
+  display: flex;
+  flex-direction: column;
 }
 
 .notLoading {

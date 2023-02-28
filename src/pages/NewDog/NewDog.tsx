@@ -23,3 +23,6 @@ const NewDog = (props: NewDogProps): JSX.Element => {
 }
 
 export default NewDog
+
+
+//* Yes, this component is useless! Will refactor 

@@ -46,7 +46,7 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
   }
 
   return (
-    <>
+    <div className={styles.content}>
       <h1 className={styles.title}>Add A Dog</h1>
       <form onSubmit={handleSubmit} className={styles.formDiv}>
         <label htmlFor="dogname-input">Name:</label>
@@ -64,7 +64,7 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
         <label htmlFor="breed-input">Breed:</label>
         <input type="text" id="breed-input" name="breed" value={form.breed} onChange={handleChange} autoComplete='off'/>
         <label htmlFor="personality-input">Personality, quirks, etc:</label>
-        <div>
+        <div className={styles.personality}>
           <input type="text" id="personality-input" name="personality" value={form.personality} onChange={handleChange} autoComplete='off'/>
           {personalityLength > 800 &&
           <p>{1234-personalityLength}/1234 characters left</p>}
@@ -94,7 +94,7 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
                 // className={styles.fileUpload}
               />
         <div></div>
-        <button type="submit">Add Dog</button>
+        <button type="submit" className={styles.submit}>Add Dog</button>
       </form>
       <div className={loading ? styles.loading : styles.notLoading}>
         <h4 className={styles.loadingText}>Loading Dog...</h4>
@@ -102,7 +102,7 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
           <div className={`${styles.justifyContentCenter} ${styles.jimuPrimaryLoading}`}></div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

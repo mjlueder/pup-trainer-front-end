@@ -20,18 +20,23 @@
   color: black;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
+  font-size: 24px;
 }
 .components a:visited {
   color: black;
 }
 
+.components h2 {
+  margin: 0;
+}
+
 .homeIcon {
-  height: 8vh;
-  margin: 1.5vh 2.5vh;
+  height: 6vh;
+  margin: 2vh 2.5vw 0 2.5vw;
 }
 
 .logoutIcon {
-  height: 6vh;
+  height: 5vh;
   margin: 1.5vh 2.5vh;
 }
 
@@ -41,5 +46,29 @@
 
 .dogLinks li {
   margin: 10px;
+}
+
+.anotherLinkClass {
+  display: flex;
+}
+
+.anotherLinkClass li {
+  margin: 0 .8rem;
+}
+
+.joinLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.joinLinks p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.joinLinks img {
+  height: 35px;
 }
 

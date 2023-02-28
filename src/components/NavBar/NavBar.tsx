@@ -2,6 +2,8 @@ import styles from './NavBar.module.css'
 
 import DogHouse from '../../assets/dog-house.png'
 import Logout from '../../assets/logout.png'
+import Login from '../../assets/login.png'
+import Signup from '../../assets/signup.png'
 
 // npm modules
 import { NavLink } from 'react-router-dom'
@@ -28,9 +30,11 @@ const NavBar = (props: NavBarProps): JSX.Element => {
             <li>
               <NavLink to="/about">About</NavLink>
             </li>
+            <h2>🐾</h2>
             <li>
               <NavLink to="/profile">My Dogs</NavLink>
             </li>
+            <h2>🐾</h2>
             <li>
               <NavLink to="/resources">Training Resources</NavLink>
             </li>
@@ -48,11 +52,24 @@ const NavBar = (props: NavBarProps): JSX.Element => {
         </ul>
       :
         <ul className={styles.components}>
-          <NavLink to="/"><img src={DogHouse} alt="paws" className={styles.paws}/></NavLink>
-          <li><NavLink to="/dogs">All Dogs</NavLink></li>
-          <div className={styles.dogLinks}>
-            <li><NavLink to="/login">Log In</NavLink></li>
-            <li><NavLink to="/signup">Sign Up</NavLink></li>
+          <NavLink to="/"><img src={DogHouse} alt="dog house icon" className={styles.homeIcon}/></NavLink>
+          {/* <li><NavLink to="/dogs">All Dogs</NavLink></li> */}
+          <li>
+            <NavLink to="/resources">Training Resources</NavLink>
+          </li>
+          <div className={styles.anotherLinkClass}>
+            <li>
+              <NavLink to="/login" className={styles.joinLinks}>
+                <img src={Login} alt="login icon" />
+                <p>Login</p>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/signup" className={styles.joinLinks}>
+                <img src={Signup} alt="signup icon" />
+                <p>Sign Up</p>
+              </NavLink>
+            </li>
           </div>
         </ul>
       }

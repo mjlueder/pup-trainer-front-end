@@ -15,10 +15,12 @@ const EditDog = (props: EditDogProps): JSX.Element => {
 
   return (
     <>
-      <h1>Edit Dog Page</h1>
       <EditDogForm user={user} handleUpdateDog={handleUpdateDog}/>
     </>
   )
 }
 
 export default EditDog
+
+
+//* Yes, this component is useless! Will refactor 

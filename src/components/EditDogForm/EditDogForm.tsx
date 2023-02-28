@@ -4,7 +4,8 @@ import { useLocation } from "react-router";
 //types
 import { DogFormData } from "../../types/forms"
 import { User, Dog } from "../../types/models";
-// import { PhotoFormData } from "../../types/forms";
+
+import styles from './EditDogForm.module.css'
 
 interface EditDogFormProps {
   user: User | null;
@@ -36,9 +37,9 @@ const EditDogForm = (props: EditDogFormProps): JSX.Element => {
     handleUpdateDog(form)
   }
   return (
-    <>
-      <h3>An edit form</h3>
-      <form onSubmit={handleSubmit}>
+    <div className={styles.content}>
+      <h1 className={styles.title}>Update Your Dog</h1>
+      <form onSubmit={handleSubmit} className={styles.formDiv}>
         <label htmlFor="dogname-input">Name:</label>
         <input type="text" id="dogname-input" name="name" value={form.name} onChange={handleChange} autoComplete='off'/>
         <label htmlFor="age-input">Age:</label>
@@ -46,12 +47,15 @@ const EditDogForm = (props: EditDogFormProps): JSX.Element => {
         <label htmlFor="breed-input">Breed:</label>
         <input type="text" id="breed-input" name="breed" value={form.breed} onChange={handleChange} autoComplete='off'/>
         <label htmlFor="personality-input">Personality, quirks, etc:</label>
-        <input type="text" id="personality-input" name="personality" value={form.personality} onChange={handleChange} autoComplete='off' maxLength={1234}/>
-        {personalityLength && (personalityLength > 800 &&
-        <p>{1234-personalityLength}/1234 characters left</p>)}
-        <button type="submit">Update Dog</button>
+        <div className={styles.personality}>
+          <input type="text" id="personality-input" name="personality" value={form.personality} onChange={handleChange} autoComplete='off' maxLength={1234}/>
+          {personalityLength && (personalityLength > 800 &&
+          <p>{1234-personalityLength}/1234 characters left</p>)}
+        </div>
+        <div></div>
+        <button type="submit" className={styles.submit}>Update Dog</button>
       </form>
-    </>
+    </div>
   )
 }
 
