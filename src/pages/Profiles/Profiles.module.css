@@ -1,18 +1,12 @@
 .dogList {
   display: flex;
   flex-direction: column-reverse;
-  /* flex-wrap: wrap; */
-  /* justify-content: center; */
-  /* align-items: center; */
 }
 
 .dogCard {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
   margin: 8vh 16vw;
-  /* width: 65vw; */
   min-height: 300px;
 }
 

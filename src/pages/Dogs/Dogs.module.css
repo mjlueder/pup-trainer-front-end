@@ -1,19 +1,9 @@
 .dogList {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  /* justify-content: end; */
-  /* align-items: center; */
 } 
 
 .dog {
-  margin: 5vh 0;
+  margin: 8vh 16vw;
+  min-height: 300px;
 }
-
-.dog:nth-child(even){
-  order: 1;
-} 
-
-.dog:nth-child(even){
-  order: 2;
-} 

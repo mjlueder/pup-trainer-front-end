@@ -31,10 +31,10 @@ const NavBar = (props: NavBarProps): JSX.Element => {
             <li>
               <NavLink to="/profile">My Dogs</NavLink>
             </li>
-            {/* <li><NavLink to="/dogs/new">Add a Dog</NavLink></li> */}
-            <li>
+            {/* Commented out for possible future use */}
+            {/* <li>
               <NavLink to="/dogs">All Dogs</NavLink>
-            </li>
+            </li> */}
           </div>
           {/* <li><NavLink to="/change-password">Change Password</NavLink></li> */}
           <li>
