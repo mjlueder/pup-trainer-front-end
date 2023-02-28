@@ -12,14 +12,11 @@
 }
 
 .img {
-  /* width: 19.7%;
-  border: .5px solid rgb(250, 250, 250, 0.95); */
-  /* height: 300px; */
   width: 20%;
 }
 
 .title {
-  font-size: 45px;
+  font-size: 65px;
 }
 
 .content {

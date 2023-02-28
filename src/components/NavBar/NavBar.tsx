@@ -26,10 +26,13 @@ const NavBar = (props: NavBarProps): JSX.Element => {
           </NavLink>
           <div className={styles.dogLinks}>
             <li>
-              <NavLink to="/about">About Pup Trainer</NavLink>
+              <NavLink to="/about">About</NavLink>
             </li>
             <li>
               <NavLink to="/profile">My Dogs</NavLink>
+            </li>
+            <li>
+              <NavLink to="/resources">Training Resources</NavLink>
             </li>
             {/* Commented out for possible future use */}
             {/* <li>

@@ -4,32 +4,25 @@ const About = (): JSX.Element => {
 
   return (
     <main className={styles.container}>
-      {/* <div > */}
-        {/* <div className={styles.content}> */}
-        <h1 className={styles.title}>About Pup Trainer</h1>
-          <div className={styles.images}>
-            <img src="https://res.cloudinary.com/dmxca77ml/image/upload/v1677530274/gahpbezc936unkk76jsw.jpg" alt="Teddy the destroyer" className={styles.img} />
-            <img src="https://res.cloudinary.com/dmxca77ml/image/upload/v1677531245/as6yurp2med2y6xd6rvx.jpg" alt="Teddy the destroyer" className={styles.img} />
-            <img src="https://res.cloudinary.com/dmxca77ml/image/upload/v1677530294/e44ckmcww0upr6194u5g.jpg" alt="Teddy the destroyer" className={styles.img} />
-            <img src="https://res.cloudinary.com/dmxca77ml/image/upload/v1677531178/m19qbairsybizoghegfh.jpg" alt="Teddy the destroyer" className={styles.img} />
-            <img src="https://res.cloudinary.com/dmxca77ml/image/upload/v1677530377/t0zdjph3za2b1mz7gvgi.jpg" className={styles.img} />
-          </div>
-          <div>
-            <h4>
-              Meet Teddy, the inspiration for Pup Trainer. Teddy was adopted after having a pretty rough life, and he brought a lot of baggage with him (he was underweight, injured, leash reactive, dog reactive, had significant separation and crate anxiety...)
-            </h4>
-            <h4>
-              Prior to adopting Teddy, I worked as an animal trainer and husbandry professional for more than a decade. Even with so much experience, it was challenging to get a handle on Teddy's behavior. I started looking for additional resources, and found that, while there are many available, it was hard to find <em>good</em> training and management resources.
-            </h4>
-            <h4>
-              Training is a wonderful way to bond with your dog, and to teach them how to interact with the human world. When your dog knows what to do, life is more for fun and relaxed for everyone! The internet is full of resources and opinions, but sorting through them to find the <em>good</em> ones can be challenging.
-            </h4>
-            <h4>
-              I built Pup Trainer to connect dog owners with legitimate, positive, and effective training materials online, so you and your dog can get right to the fun.
-            </h4>
-          </div>
-        {/* </div> */}
-      {/* </div> */}
+      <h1 className={styles.title}>About Pup Trainer</h1>
+        <div className={styles.images}>
+          <img src="https://res.cloudinary.com/dmxca77ml/image/upload/v1677530274/gahpbezc936unkk76jsw.jpg" alt="Teddy the destroyer" className={styles.img} />
+          <img src="https://res.cloudinary.com/dmxca77ml/image/upload/v1677531245/as6yurp2med2y6xd6rvx.jpg" alt="Teddy the destroyer" className={styles.img} />
+          <img src="https://res.cloudinary.com/dmxca77ml/image/upload/v1677530294/e44ckmcww0upr6194u5g.jpg" alt="Teddy the destroyer" className={styles.img} />
+          <img src="https://res.cloudinary.com/dmxca77ml/image/upload/v1677531178/m19qbairsybizoghegfh.jpg" alt="Teddy the destroyer" className={styles.img} />
+          <img src="https://res.cloudinary.com/dmxca77ml/image/upload/v1677530377/t0zdjph3za2b1mz7gvgi.jpg" className={styles.img} />
+        </div>
+        <div>
+          <h4>
+            Meet Teddy, the inspiration behind Pup Trainer. Teddy had a challenging start in life and arrived at his forever home with a lot of baggage, including being underweight, injured, leash reactive, dog reactive, and suffering from significant separation and crate anxiety. Despite my extensive background as an animal trainer and husbandry professional, I struggled to manage Teddy's behavior and sought additional resources to help him thrive.
+          </h4>
+          <h4>
+            Unfortunately, I found that while there are numerous dog training resources available online, it can be difficult to distinguish the effective and reputable ones from the rest. That's why I created Pup Trainer: to provide dog owners with access to legitimate, positive, and effective training materials that will help strengthen the bond between you and your furry companion while teaching them valuable skills for interacting with the human world.
+          </h4>
+          <h4>
+            Training your dog is not only fun but also essential for their well-being and the overall happiness of your household. With Pup Trainer, you can skip the frustrating and time-consuming search for quality training resources and dive straight into the joy of bonding with your pup.
+          </h4>
+        </div>
     </main>
   )
 }
