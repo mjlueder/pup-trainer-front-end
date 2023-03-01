@@ -22,11 +22,11 @@ const DogCard = (props: DogCardProps): JSX.Element => {
         <h2 className={styles.name}>{dog.name}</h2>
         <div className={styles.details}>
           {dog.age &&
-          <h4>Age:  {dog.age}</h4>}
+          <h4>Age: {dog.age}</h4>}
           {dog.breed &&
           <h4>Breed:  {dog.breed}</h4>}
           {dog.personality &&
-          <h4>Personality, traits, & quirks:  {dog.personality}</h4>}
+          <h4>Personality:  {dog.personality}</h4>}
         </div>
       </div>
       <img 
