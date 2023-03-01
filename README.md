@@ -2,10 +2,10 @@
 
 ### Training is a wonderful way to bond with your dog, and to teach them how to interact with the human world. When your dog knows what to do, life is more for fun and relaxed for everyone! The internet is full of resources and opinions, but sorting through them to find the *good* ones can be challenging.
 
-### I have more than a decade of professional animal care, management, and training experience, so I built Pup Trainer to connect dog owners with safe, positive, and effective training materials online, so you can skip the frustrating and time-consuming search for quality training resources and dive straight into the fun of bonding with your pup.
+### I have more than a decade of professional animal care, management, and training experience, so I built Pup Trainer to connect dog owners with safe, positive, and effective training materials online, so you can skip the time-consuming and often frustrating search for quality training resources and dive straight into the fun of bonding with your pup.
 ---
 
-# [Launch Pup Trainer](https://pup-trainer.netlify.app/)
+# [✨ Launch Pup Trainer](https://pup-trainer.netlify.app/)
 
 > [Planning materials on Trello](https://trello.com/b/2NRuJDBg/dog-training)<br/>
 > [Back end repository](https://github.com/mjlueder/pup-trainer-back-end)
