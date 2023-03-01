@@ -6,7 +6,6 @@ import Collar from '../../assets/collar-color.png'
 
 // npm packages
 import { useState, useEffect } from 'react'
-// import { useLocation } from 'react-router-dom'
 
 // services
 import * as profileService from '../../services/profileService'
@@ -78,12 +77,11 @@ const Profiles = (props: ProfilesProps): JSX.Element => {
                 </div>
               </div>
             : <></>
-            
           }
         </div>
       )}
     </main>
   )
 }
- 
+
 export default Profiles

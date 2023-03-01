@@ -38,12 +38,15 @@ const NavBar = (props: NavBarProps): JSX.Element => {
             <li>
               <NavLink to="/resources">Training Resources</NavLink>
             </li>
+          </div>
+
             {/* Commented out for possible future use */}
+
             {/* <li>
               <NavLink to="/dogs">All Dogs</NavLink>
             </li> */}
-          </div>
           {/* <li><NavLink to="/change-password">Change Password</NavLink></li> */}
+
           <li>
             <NavLink to="" onClick={handleLogout}>
               <img src={Logout} alt="logout icon man and dog walking away" className={styles.logoutIcon}/>
@@ -58,8 +61,11 @@ const NavBar = (props: NavBarProps): JSX.Element => {
               <NavLink to="/resources">🐾 Training Resources 🐾</NavLink>
             </li>
           </div>
+
           {/* Commented out for possible future use */}
+          
           {/* <li><NavLink to="/dogs">All Dogs</NavLink></li> */}
+
           <div className={styles.anotherLinkClass}>
             <li>
               <NavLink to="/login" className={styles.joinLinks}>

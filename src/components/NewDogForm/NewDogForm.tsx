@@ -11,16 +11,11 @@ interface NewDogFormProps {
   handleAddDog: (form: DogFormData, photo: File | null) => void;
 }
 
-// interface Photo {
-//   photo: File | null;
-// }
-
 const NewDogForm = (props: NewDogFormProps): JSX.Element => {
   const { user, handleAddDog } = props
 
   const [loading, setLoading] = useState<boolean>(false)
   const [photoData, setPhotoData] = useState<PhotoFormData>({photo: null})
-  // const [photoChanged, setPhotoChanged] = useState(false)
   const [form, setForm] = useState<DogFormData>({
     name: '',
     age: '',
@@ -34,7 +29,6 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
 
   const handleChangePhoto = (evt: React.ChangeEvent<HTMLInputElement>) => {
     if (evt.target.files) setPhotoData({ photo: evt.target.files[0] })
-    // setPhotoChanged(true)
   }
 
   const personalityLength: number = form.personality?.length
@@ -72,30 +66,15 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
           </div>
           <h4 className={styles.photoLabel}>Photo:</h4>
           <label htmlFor="photo-upload" className={styles.upload}>
-                Upload Photo
-              </label>
-                {/* <div className={styles.upload}>
-                  <button 
-                    className={styles.button} 
-                    onClick={handleClick}
-                    form=""
-                  >
-                    Choose File
-                  </button>
-                  {photoChanged && 
-                    <p className={styles.uploadText}>
-                      image uploaded
-                    </p>}
-                </div> */}
-                <input
-                  type="file"
-                  id="photo-upload"
-                  name="photo"
-                  // ref={hiddenFileInput}
-                  onChange={handleChangePhoto}
-                  
-                  className={styles.fileUpload}
-                />
+            Upload Photo
+          </label>
+          <input
+            type="file"
+            id="photo-upload"
+            name="photo"
+            onChange={handleChangePhoto}
+            className={styles.fileUpload}
+          />
           <div></div>
           <button type="submit" className={styles.submit}>Add Dog</button>
         </form>
@@ -109,6 +88,7 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
           {/* <div className={styles.loader}>
             <div className={styles.jimuPrimaryLoading}></div>
           </div> */}
+
         </div>
       </div>
     </>

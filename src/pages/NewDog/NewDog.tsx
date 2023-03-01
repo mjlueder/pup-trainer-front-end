@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react"
-
 // types
 import { Dog, User } from "../../types/models"
 import { DogFormData } from "../../types/forms";
@@ -23,6 +21,7 @@ const NewDog = (props: NewDogProps): JSX.Element => {
 }
 
 export default NewDog
+
 
 
 //* Yes, this component is useless! Will refactor 
