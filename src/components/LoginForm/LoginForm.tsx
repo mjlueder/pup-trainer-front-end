@@ -51,7 +51,6 @@ const LoginForm = (props: AuthFormProps): JSX.Element => {
       onSubmit={handleSubmit}
       className={`${styles.container} ${styles.formDiv}`}
     >
-      {/* <div className={styles.inputContainer}> */}
         <label htmlFor="email" className={styles.label}>Email</label>
         <input
           type="text"
@@ -60,8 +59,6 @@ const LoginForm = (props: AuthFormProps): JSX.Element => {
           name="email"
           onChange={handleChange}
         />
-      {/* </div>
-      <div className={styles.inputContainer}> */}
         <label htmlFor="password" className={styles.label}>Password</label>
         <input
           type="password"

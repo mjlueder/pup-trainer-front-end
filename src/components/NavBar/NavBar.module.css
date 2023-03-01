@@ -28,6 +28,8 @@
 
 .components h2 {
   margin: 0;
+  height: 33px;
+  /* font-size: 32px; */
 }
 
 .homeIcon {
@@ -40,20 +42,27 @@
   margin: 1.5vh 2.5vh;
 }
 
+.guestLinks {
+  display: flex;
+  align-items: center;
+}
+
 .dogLinks {
   display: flex;
+  align-items: center;
 }
 
 .dogLinks li {
-  margin: 10px;
+  margin: 10px 15px;
 }
 
 .anotherLinkClass {
   display: flex;
+  margin-right: 1rem;
 }
 
 .anotherLinkClass li {
-  margin: 0 .8rem;
+  margin: 0 1rem;
 }
 
 .joinLinks {

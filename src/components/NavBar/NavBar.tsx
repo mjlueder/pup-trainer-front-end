@@ -52,11 +52,14 @@ const NavBar = (props: NavBarProps): JSX.Element => {
         </ul>
       :
         <ul className={styles.components}>
-          <NavLink to="/"><img src={DogHouse} alt="dog house icon" className={styles.homeIcon}/></NavLink>
+          <div className={styles.guestLinks}>
+            <NavLink to="/"><img src={DogHouse} alt="dog house icon" className={styles.homeIcon}/></NavLink>
+            <li>
+              <NavLink to="/resources">🐾 Training Resources 🐾</NavLink>
+            </li>
+          </div>
+          {/* Commented out for possible future use */}
           {/* <li><NavLink to="/dogs">All Dogs</NavLink></li> */}
-          <li>
-            <NavLink to="/resources">Training Resources</NavLink>
-          </li>
           <div className={styles.anotherLinkClass}>
             <li>
               <NavLink to="/login" className={styles.joinLinks}>

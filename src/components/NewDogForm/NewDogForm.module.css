@@ -55,7 +55,16 @@
   display: none;
 }
 
-.loader {
+
+
+
+/* Content below is for a loading image that isn't working quite right yet */
+
+
+
+
+
+/* .loader {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -132,4 +141,4 @@
     box-shadow: 0 -8px #076fe5;
     height: 40px;
   }
-}
+} */

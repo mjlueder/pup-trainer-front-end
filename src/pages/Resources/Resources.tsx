@@ -21,7 +21,6 @@ const Resources = (): JSX.Element => {
           <ul>
             <li>A brief beginner's guide to understanding dog training resources and methods, including tips for identifying effective and humane techniques and potential red flags to watch out for.</li>
           </ul>
-          <br />
           <Link to="https://youtu.be/omZt5Eu8nfE" target="_blank">
             Clicker Training Basics Video
           </Link>
@@ -100,7 +99,7 @@ const Resources = (): JSX.Element => {
         </div>
         <div className={styles.aLink}>
           <h3 >Reactive Dog Resources</h3>
-          <h4>ADD A DISCLAIMER!</h4>
+          <h5><em>DISCLAIMER!</em> While these resources can be beneficial, some dogs need more training than non-professionals can provide. If your dog is reactive or aggressive, a good trainer or behaviorist may be your best option. I cannot evaluate or advise on individual cases.</h5>
           <Link to="https://youtube.com/playlist?list=PLXtcKXk-QWojGYcl1NCg5UA5geEnmpx4a" target="_blank">
             Kikopup: Reactivity & Barking Playlist
           </Link>
@@ -110,7 +109,7 @@ const Resources = (): JSX.Element => {
           </Link>
         </div>
         <div className={styles.bLink}>
-          <h3>Finding a trainer or behaviorist</h3>
+          <h3>Finding a certified trainer or behaviorist</h3>
           <Link to="https://www.petmd.com/dog/behavior/do-you-need-hire-dog-behaviorist" target="_blank">
             Do you need a trainer or a behaviorist?
           </Link>

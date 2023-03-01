@@ -1,8 +1,8 @@
-ADD TITLE
+![Title Image](/src/assets/splash.png)
 
 ### Training is a wonderful way to bond with your dog, and to teach them how to interact with the human world. When your dog knows what to do, life is more for fun and relaxed for everyone! The internet is full of resources and opinions, but sorting through them to find the *good* ones can be challenging.
 
-### I built Pup Trainer to connect dog owners with legitimate, positive, and effective training materials online, so you and your dog can get right to the fun.
+### I have more than a decade of professional animal care, management, and training experience, so I built Pup Trainer to connect dog owners with safe, positive, and effective training materials online, so you can skip the frustrating and time-consuming search for quality training resources and dive straight into the fun of bonding with your pup.
 ---
 
 # [Launch Pup Trainer](https://pup-trainer.netlify.app/)
@@ -11,7 +11,7 @@ ADD TITLE
 > [Back end repository](https://github.com/mjlueder/pup-trainer-back-end)
 
 
-ADD A SCREENSHOT
+![main page](/src/assets/readme.gif)
 
 
 ### 🗜️ Technologies Used
@@ -28,16 +28,15 @@ ADD A SCREENSHOT
 
 ### 🧊 Planned Features
 - [x] Allow users to add a photo of their dog
+- [x] Add "find a trainer" resources
+- [ ] Mobile-friendly design
+- [ ] Add edit photo functionality
 - [ ] Allow users to search for behaviors
 - [ ] Connect to more training resources
-- [ ] Allow users to add training behaviors to their dogs
-- [ ] Add "find a trainer" resources
+- [ ] Allow users to add current training behaviors for their dogs
 
 
 ### Attributes
 [Landing page dog](https://stock.adobe.com/search/free?filters%5Bcontent_type%3Aphoto%5D=1&filters%5Bcontent_type%3Aillustration%5D=1&filters%5Bcontent_type%3Azip_vector%5D=1&filters%5Bcontent_type%3Avideo%5D=0&filters%5Bcontent_type%3Atemplate%5D=0&filters%5Bcontent_type%3A3d%5D=0&filters%5Bcontent_type%3Aaudio%5D=0&filters%5Binclude_stock_enterprise%5D=0&filters%5Bis_editorial%5D=0&filters%5Bfree_collection%5D=1&filters%5Bcontent_type%3Aimage%5D=1&k=dog&order=relevance&safe_search=1&search_page=1&get_facets=1&asset_id=382431793)<br />
-[Paw, doghouse, and logout icons](https://www.flaticon.com/)<br />
+[Icons](https://www.flaticon.com/)<br />
 [Default dog pic](https://www.flaticon.com/free-icons/dog-food)
-
-
-[Loading image](https://uiverse.io/Donewenfu/massive-badger-47)

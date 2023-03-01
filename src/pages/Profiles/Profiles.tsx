@@ -57,11 +57,11 @@ const Profiles = (props: ProfilesProps): JSX.Element => {
                   <img src={Collar} alt="dog collar" /> 
                   <h1>Dogs</h1>
                 </div>
-                <Link to="/dogs/new">
-                  <button>Add a Dog</button>
-                </Link>
               </div>
                 <div className={styles.dogList}>
+                <Link to="/dogs/new" className={styles.addDog}>
+                  <button>Add a Dog</button>
+                </Link>
                   {profile.dogs?.map((dog: Dog) => (
                     <div key={dog.id} className={styles.dogCard}>
                       < DogCard  user={user} dog={dog} handleDeleteDog={handleDeleteDog}/>
