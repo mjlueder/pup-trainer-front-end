@@ -70,8 +70,9 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
             {personalityLength > 800 &&
             <p>{1234-personalityLength}/1234 characters left</p>}
           </div>
-          <label htmlFor="photo-upload">
-                Upload Photo:
+          <h4 className={styles.photoLabel}>Photo:</h4>
+          <label htmlFor="photo-upload" className={styles.upload}>
+                Upload Photo
               </label>
                 {/* <div className={styles.upload}>
                   <button 
@@ -92,7 +93,8 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
                   name="photo"
                   // ref={hiddenFileInput}
                   onChange={handleChangePhoto}
-                  // className={styles.fileUpload}
+                  
+                  className={styles.fileUpload}
                 />
           <div></div>
           <button type="submit" className={styles.submit}>Add Dog</button>
@@ -103,7 +105,7 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
           <h4 className={styles.loadingText}>Loading Dog...</h4>
 
           {/* div below is for a loading image that is not currenlty working */}
-          
+
           {/* <div className={styles.loader}>
             <div className={styles.jimuPrimaryLoading}></div>
           </div> */}

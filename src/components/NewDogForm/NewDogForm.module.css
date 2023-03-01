@@ -37,7 +37,7 @@
 }
 
 .formDiv label {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 22px;
 }
 
@@ -55,7 +55,26 @@
   display: none;
 }
 
+.fileUpload {
+  display: none;
+}
 
+.upload {
+  background-color: rgb(96, 109, 122);
+  padding: 8px 16px;
+  border-radius: 4px;
+  width: 35%;
+  /* color: black; */
+  /* font-size: px;
+  font-weight: 400; */
+  text-align: center;
+}
+
+.photoLabel {
+  font-weight: 500;
+  font-size: 22px;
+  margin: 0;
+}
 
 
 /* Content below is for a loading image that isn't working quite right yet */
