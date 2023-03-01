@@ -17,8 +17,10 @@
 
 .img {
   margin: 15px;
-  width: auto;
   max-width: 47%;
+  width: auto;
+  max-height: 90%;
+  height: auto;
   border: 1px solid rgb(0, 0, 0, .6);
   margin: 20px 20px 20px 0;
   border-radius: 4px;

@@ -49,8 +49,8 @@ const EditDogForm = (props: EditDogFormProps): JSX.Element => {
         <label htmlFor="personality-input">Personality, quirks, etc:</label>
         <div className={styles.personality}>
           <input type="text" id="personality-input" name="personality" value={form.personality} onChange={handleChange} autoComplete='off' maxLength={1234}/>
-          {personalityLength && (personalityLength > 800 &&
-          <p>{1234-personalityLength}/1234 characters left</p>)}
+          {personalityLength! > 800 ?
+          <p>{1234-personalityLength!}/1234 characters left</p> : <></>} 
         </div>
         <div></div>
         <button type="submit" className={styles.submit}>Update Dog</button>
