@@ -47,6 +47,10 @@
   align-items: center;
 }
 
+.guestLinks :nth-child(2) {
+  margin-right: 8px;
+}
+
 .dogLinks {
   display: flex;
   align-items: center;
