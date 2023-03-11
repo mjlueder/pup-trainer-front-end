@@ -4,6 +4,9 @@ import DogHouse from '../../assets/dog-house.png'
 import Logout from '../../assets/logout.png'
 import Login from '../../assets/login.png'
 import Signup from '../../assets/signup.png'
+import Info from '../../assets/info.png'
+import Sit from '../../assets/dog-sit.png'
+import Paw from '../../assets/paws.png'
 
 // npm modules
 import { NavLink } from 'react-router-dom'
@@ -14,10 +17,11 @@ import { User } from '../../types/models'
 interface NavBarProps {
   user: User | null;
   handleLogout: () => void;
+  width: number;
 }
 
 const NavBar = (props: NavBarProps): JSX.Element => {
-  const { user, handleLogout } = props
+  const { user, handleLogout, width } = props
   
   return (
     <nav className={styles.nav}>
@@ -28,15 +32,35 @@ const NavBar = (props: NavBarProps): JSX.Element => {
           </NavLink>
           <div className={styles.dogLinks}>
             <li>
+              { width < 500 ?
+              <NavLink to="/about">
+                <img src={Info} alt="info icon - About Pup Trainer" className={styles.infoIcon}/>
+              </NavLink>
+              :
               <NavLink to="/about">About</NavLink>
+              }
             </li>
-            <h2>🐾</h2>
+            {width > 500 && 
+            <h2>🐾</h2>}
             <li>
+              { width < 500 ?
+              <NavLink to="/profile">
+                <img src={Paw} alt="" className={styles.pawsIcon}/>
+              </NavLink>
+              :
               <NavLink to="/profile">My Dogs</NavLink>
+              }
             </li>
-            <h2>🐾</h2>
+            {width > 500 && 
+            <h2>🐾</h2>}
             <li>
+              { width < 500 ?
+              <NavLink to="/resources">
+                <img src={Sit} alt="sitting dog - training resources" className={styles.sitIcon}/>
+              </NavLink>
+              :
               <NavLink to="/resources">Training Resources</NavLink>
+              }
             </li>
           </div>
 
@@ -58,10 +82,22 @@ const NavBar = (props: NavBarProps): JSX.Element => {
           <div className={styles.guestLinks}>
             <NavLink to="/"><img src={DogHouse} alt="dog house icon" className={styles.homeIcon}/></NavLink>
             <li>
-              <NavLink to="/about">About</NavLink>
+              { width < 500 ?
+                <NavLink to="/about">
+                  <img src={Info} alt="info icon - About Pup Trainer" className={styles.infoIcon}/>
+                </NavLink>
+                :
+                <NavLink to="/about">About</NavLink>
+              }
             </li>
             <li>
-              <NavLink to="/resources">🐾 Training Resources 🐾</NavLink>
+              { width < 500 ?
+                <NavLink to="/resources">
+                  <img src={Sit} alt="sitting dog - training resources" className={styles.sitIcon}/>
+                </NavLink>
+                :
+                <NavLink to="/resources">🐾 Training Resources 🐾</NavLink>
+              }
             </li>
           </div>
 

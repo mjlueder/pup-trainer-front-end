@@ -34,7 +34,8 @@ function App(): JSX.Element {
   
   const [user, setUser] = useState<User | null>(authService.getUser())
   const [dogs, setDogs] = useState<Dog[]>([])
-
+  const [width, setWidth] = useState<number>(window.innerWidth)
+  
   useEffect((): void => {
     const fetchDogs = async (): Promise<void> => {
       try {
@@ -77,7 +78,7 @@ function App(): JSX.Element {
 
   return (
     <>
-      <NavBar user={user} handleLogout={handleLogout} />
+      <NavBar user={user} handleLogout={handleLogout} width={width}/>
       <Routes>
         <Route path="/" element={<Landing user={user} />} />
         <Route

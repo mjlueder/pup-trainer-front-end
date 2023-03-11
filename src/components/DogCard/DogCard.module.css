@@ -16,7 +16,7 @@
 }
 
 .img {
-  margin: 15px;
+  /* margin: 15px; */
   max-height: 450px;
   /* height: auto; */
   max-width: 400px;
@@ -47,6 +47,17 @@
   .text {
     width: 90%;
   }
-
+  .name {
+    font-size: 28px;
+  }
+  .details {
+    font-size: 18px;
+  }
+  .details h4 {
+    margin: 16px 0;
+  }
+  .img {
+    margin: 0 0 15px 0;
+  }
 }
 

@@ -44,3 +44,22 @@
   display: flex;
   flex-direction: column;
 }
+
+@media only screen and (max-width: 800px) {
+  .submit {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .title {
+    text-align: center;
+    font-size: 35px;
+  }
+  .formDiv {
+    width: 90%;
+  }
+  .submit {
+    width: 70%;
+  }
+}
