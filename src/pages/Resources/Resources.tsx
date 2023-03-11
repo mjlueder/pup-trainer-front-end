@@ -12,6 +12,9 @@ const Resources = (): JSX.Element => {
         <h1>Training Resources</h1> 
         <img src={Collar} alt="dog collar" />
       </div>
+      <h4>
+        The following resources - at the time of posting - are based on positive reinforcement methods and use effective and safe behavior-change strategies. See "About" section for additional information. Login to set up a profile for your dog!
+      </h4>
       <div className={styles.resources}>
         <div className={styles.aLink}>
           <h3>Training 101</h3>

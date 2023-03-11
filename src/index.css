@@ -34,8 +34,14 @@ h1 {
   margin: 30px 10px;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 800px) {
   h1 {
     font-size: 45px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 15px;
   }
 }
