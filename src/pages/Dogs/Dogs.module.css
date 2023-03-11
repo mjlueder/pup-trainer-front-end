@@ -5,5 +5,11 @@
 
 .dog {
   margin: 8vh 16vw;
-  min-height: 300px;
+  /* min-height: 300px; */
+}
+
+@media only screen and (max-width: 800px) {
+  .dog {
+    margin: 5vh 5vw;
+  }
 }
