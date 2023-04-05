@@ -17,6 +17,7 @@ import NewDog from './pages/NewDog/NewDog'
 import EditDog from './pages/EditDog/EditDog'
 import About from './pages/About/About'
 import Resources from './pages/Resources/Resources'
+import SmallScreenNav from './components/NavBar/SmallScreenNav'
 
 // services
 import * as authService from './services/authService'
@@ -35,6 +36,7 @@ function App(): JSX.Element {
   const [user, setUser] = useState<User | null>(authService.getUser())
   const [dogs, setDogs] = useState<Dog[]>([])
   const [width, setWidth] = useState<number>(window.innerWidth)
+  const [isOpen, setIsOpen] = useState(false)
   
   useEffect((): void => {
     const fetchDogs = async (): Promise<void> => {
@@ -76,9 +78,27 @@ function App(): JSX.Element {
     navigate('/profile')
   }
 
+  const handleOpen = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
     <>
-      <NavBar user={user} handleLogout={handleLogout} width={width}/>
+      { width < 750 ?
+        <SmallScreenNav 
+          isOpen={isOpen}
+          handleOpen={handleOpen}
+          user={user} 
+          handleLogout={handleLogout} 
+          width={width}
+        />
+        : 
+        <NavBar 
+          user={user} 
+          handleLogout={handleLogout} 
+          width={width}
+        />
+      }
       <Routes>
         <Route path="/" element={<Landing user={user} />} />
         <Route
