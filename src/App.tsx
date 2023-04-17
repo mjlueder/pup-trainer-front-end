@@ -142,7 +142,7 @@ function App(): JSX.Element {
           }
         />
         {/* Saving for possible future use */}
-        {/* <Route path="/dogs" element={<Dogs dogs={dogs} user={user} handleDeleteDog={handleDeleteDog}/>}/> */}
+        <Route path="/dogs" element={<Dogs dogs={dogs} user={user} handleDeleteDog={handleDeleteDog}/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/resources" element={<Resources/>}/>
       </Routes>

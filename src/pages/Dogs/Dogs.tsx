@@ -17,7 +17,8 @@ const Dogs = (props: DogsProps): JSX.Element => {
 
   return (
     <>
-      <h1>cute dogs!</h1>
+      {!user &&
+      <h2 className={styles.title}>Log in or sign up to add your own dogs 🐕</h2>}
       <div className={styles.dogList}>
         {dogs.map((dog, idx) => (
           <div key={dog.id} className={styles.dog}>
