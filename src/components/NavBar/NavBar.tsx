@@ -32,35 +32,17 @@ const NavBar = (props: NavBarProps): JSX.Element => {
           </NavLink>
           <div className={styles.dogLinks}>
             <li>
-              {/* { width < 500 ?
-              <NavLink to="/about">
-                <img src={Info} alt="info icon - About Pup Trainer" className={styles.infoIcon}/>
-              </NavLink>
-              : */}
               <NavLink to="/about">About</NavLink>
-              {/* } */}
             </li>
             {width > 500 && 
             <h2>🐾</h2>}
             <li>
-              {/* { width < 500 ?
-              <NavLink to="/profile">
-                <img src={Paw} alt="" className={styles.pawsIcon}/>
-              </NavLink> */}
-              
               <NavLink to="/profile">My Dogs</NavLink>
-              {/* } */}
             </li>
             {width > 500 && 
             <h2>🐾</h2>}
             <li>
-              {/* { width < 500 ?
-              <NavLink to="/resources">
-                <img src={Sit} alt="sitting dog - training resources" className={styles.sitIcon}/>
-              </NavLink>
-              : */}
               <NavLink to="/resources">Training Resources</NavLink>
-              {/* } */}
             </li>
             {width > 500 && 
             <h2>🐾</h2>}
@@ -68,9 +50,6 @@ const NavBar = (props: NavBarProps): JSX.Element => {
               <NavLink to="/dogs">All Dogs</NavLink>
             </li>
           </div>
-
-          {/* <li><NavLink to="/change-password">Change Password</NavLink></li> */}
-
           <li>
             <NavLink to="" onClick={handleLogout}>
               <img src={Logout} alt="logout icon man and dog walking away" className={styles.logoutIcon}/>
@@ -82,29 +61,13 @@ const NavBar = (props: NavBarProps): JSX.Element => {
           <div className={styles.guestLinks}>
             <NavLink to="/"><img src={DogHouse} alt="dog house icon" className={styles.homeIcon}/></NavLink>
             <li>
-              {/* { width < 500 ?
-                <NavLink to="/about">
-                  <img src={Info} alt="info icon - About Pup Trainer" className={styles.infoIcon}/>
-                </NavLink>
-                : */}
                 <NavLink to="/about">About</NavLink>
-              {/* } */}
             </li>
             <li>
-              {/* { width < 500 ?
-                <NavLink to="/resources">
-                  <img src={Sit} alt="sitting dog - training resources" className={styles.sitIcon}/>
-                </NavLink>
-                : */}
                 <NavLink to="/resources">🐾 Training Resources 🐾</NavLink>
-              {/* } */}
             </li>
             <li><NavLink to="/dogs">&nbsp;All Dogs</NavLink></li>
           </div>
-
-          {/* Commented out for possible future use */}
-          
-
           <div className={styles.anotherLinkClass}>
             <li>
               <NavLink to="/login" className={styles.joinLinks}>

@@ -43,9 +43,6 @@ const NavLinkList = (props: NavListProps): JSX.Element => {
               <NavLink to="/resources">Training Resources</NavLink>
             </li>
           </div>
-
-            {/* Commented out for possible future use */}
-
             <li>
               <NavLink to="/dogs">All Dogs</NavLink>
             </li>
@@ -68,9 +65,6 @@ const NavLinkList = (props: NavListProps): JSX.Element => {
                 <NavLink to="/resources">🐾 Training Resources 🐾</NavLink>
             </li>
           </div>
-
-          {/* Commented out for possible future use */}
-          
           <li><NavLink to="/dogs">All Dogs</NavLink></li>
 
           <div className={styles.anotherLinkClass}>

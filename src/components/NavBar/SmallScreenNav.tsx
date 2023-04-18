@@ -1,4 +1,7 @@
 import { User } from '../../types/models'
+import styles from './NavBar.module.css'
+import { NavLink } from 'react-router-dom';
+import DogHouse from '../../assets/dog-house.png'
 
 interface SmallScreenProps {
   user: User | null;
@@ -13,7 +16,24 @@ const SmallScreenNav = (props: SmallScreenProps): JSX.Element => {
 
   return (
     <>
-    
+      <nav className={styles.nav}>
+        <NavLink to="/">
+          <img src={DogHouse} alt="home button dog house" className={styles.homeIcon}/>
+        </NavLink>
+
+        
+
+
+
+        <div>
+          <button onClick={handleOpen}>
+            {isOpen ? 'x' : '≡'}
+          </button>
+          <div>
+            {/* {isOpen && <NavLinksList isOpen={isOpen} user={user} handleLogout={handleLogout}/>} */}
+          </div>
+        </div>
+      </nav>
     </>
   )
 }

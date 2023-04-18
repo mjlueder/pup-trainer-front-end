@@ -82,6 +82,10 @@ function App(): JSX.Element {
     setIsOpen(!isOpen)
   }
 
+  useEffect(() => {
+    window.addEventListener('resize', () => setWidth(window.innerWidth))
+  }, [])
+
   return (
     <>
       { width < 750 ?
