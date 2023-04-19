@@ -6,13 +6,19 @@ import styles from './Landing.module.css'
 
 // types
 import { User } from '../../types/models'
+import { useEffect } from 'react';
 
 interface LandingProps {
   user: User | null;
+  handlePageChange: () => void;
 }
 
 const Landing = (props: LandingProps): JSX.Element => {
-  const { user } = props
+  const { user, handlePageChange } = props
+
+  useEffect(() => {
+    handlePageChange()
+  }, [])
 
   return (
     <main className={styles.container}>

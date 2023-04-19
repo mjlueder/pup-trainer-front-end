@@ -1,5 +1,5 @@
 // npm packages
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 // components
 import SignupForm from '../../components/SignupForm/SignupForm'
@@ -10,12 +10,17 @@ import styles from './Signup.module.css'
 // types
 interface SignupProps {
   handleAuthEvt: () => void;
+  handlePageChange: () => void;
 }
 
 const Signup = (props: SignupProps): JSX.Element => {
   const [message, setMessage] = useState('')
 
   const updateMessage = (msg: string): void => setMessage(msg)
+
+  useEffect(() => {
+    props.handlePageChange()
+  }, [])
 
   return (
     <main className={styles.container}>

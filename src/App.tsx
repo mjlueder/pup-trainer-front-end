@@ -82,6 +82,10 @@ function App(): JSX.Element {
     setIsOpen(!isOpen)
   }
 
+  const handlePageChange = () => {
+    setIsOpen(false)
+  }
+
   useEffect(() => {
     window.addEventListener('resize', () => setWidth(window.innerWidth))
   }, [])
@@ -104,10 +108,10 @@ function App(): JSX.Element {
         />
       }
       <Routes>
-        <Route path="/" element={<Landing user={user} />} />
+        <Route path="/" element={<Landing user={user} handlePageChange={handlePageChange}/>} />
         <Route
           path="/signup"
-          element={<Signup handleAuthEvt={handleAuthEvt} />}
+          element={<Signup handleAuthEvt={handleAuthEvt} handlePageChange={handlePageChange}/>}
         />
         <Route
           path="/login"
