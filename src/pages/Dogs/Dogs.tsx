@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import styles from './Dogs.module.css'
 
 // types
@@ -7,13 +9,18 @@ interface DogsProps {
   dogs: Dog[];
   user: User | null;
   handleDeleteDog: (id: number) => Promise<void>;
+  handlePageChange: () => void;
 }
 
 // components
 import DogCard from '../../components/DogCard/DogCard'
 
 const Dogs = (props: DogsProps): JSX.Element => {
-  const { dogs, user, handleDeleteDog } = props
+  const { dogs, user, handleDeleteDog, handlePageChange } = props
+
+  useEffect(() => {
+    handlePageChange()
+  }, [])
 
   return (
     <>
