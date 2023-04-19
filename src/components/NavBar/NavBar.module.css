@@ -97,6 +97,17 @@
   height: 6vh;
 }
 
+.menuBtn {
+  font-size: 24px;
+  padding: 0 12px 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.menuBtn p {
+  margin: 0;
+  text-align: center;
+}
 
 @media only screen and (max-width: 750px) {
   .nav {
@@ -106,12 +117,14 @@
   .menu {
     z-index: 1;
     background-color: rgb(240, 240, 240);
+    
   }
   .menu a {
     color: black;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
+    
   }
   .menu a:visited {
     color: black;
@@ -120,5 +133,11 @@
   .menu ul {
     background-color: rgb(240, 240, 240);
     list-style-type: none;
+    padding-left: 16px;
+    margin-top: 0;
+    
+  }
+  .menu li {
+    padding-bottom: 4px;
   }
 }

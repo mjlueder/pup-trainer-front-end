@@ -22,8 +22,10 @@ const SmallScreenNav = (props: SmallScreenProps): JSX.Element => {
         </NavLink>
 
         <div className={styles.menu}>
-          <button onClick={handleOpen}>
-            {isOpen ? 'x' : '≡'}
+          <button onClick={handleOpen} className={styles.menuBtn}>
+            <p>
+              {isOpen ? 'x' : '≡'}
+            </p>
           </button>
 
           <div >
