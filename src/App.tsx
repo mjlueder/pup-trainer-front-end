@@ -115,13 +115,13 @@ function App(): JSX.Element {
         />
         <Route
           path="/login"
-          element={<Login handleAuthEvt={handleAuthEvt} />}
+          element={<Login handleAuthEvt={handleAuthEvt} handlePageChange={handlePageChange}/>}
         />
         <Route
           path="/profile"
           element={
             <ProtectedRoute user={user}>
-              <Profiles user={user} handleDeleteDog={handleDeleteDog} dogs={dogs}/>
+              <Profiles user={user} handleDeleteDog={handleDeleteDog} dogs={dogs} handlePageChange={handlePageChange}/>
             </ProtectedRoute>
           }
         />
@@ -129,7 +129,7 @@ function App(): JSX.Element {
           path="/dogs/new"
           element={
             <ProtectedRoute user={user}>
-              <NewDog user={user} handleAddDog={handleAddDog}/>
+              <NewDog user={user} handleAddDog={handleAddDog} handlePageChange={handlePageChange}/>
             </ProtectedRoute>
           }
         />
@@ -137,7 +137,7 @@ function App(): JSX.Element {
           path="/dogs/:id/edit"
           element={
             <ProtectedRoute user={user}>
-              <EditDog user={user} handleUpdateDog={handleUpdateDog}/>
+              <EditDog user={user} handleUpdateDog={handleUpdateDog} handlePageChange={handlePageChange}/>
             </ProtectedRoute>
           }
         />
@@ -150,9 +150,9 @@ function App(): JSX.Element {
           }
         />
         {/* Saving for possible future use */}
-        <Route path="/dogs" element={<Dogs dogs={dogs} user={user} handleDeleteDog={handleDeleteDog}/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/resources" element={<Resources/>}/>
+        <Route path="/dogs" element={<Dogs dogs={dogs} user={user} handleDeleteDog={handleDeleteDog} handlePageChange={handlePageChange}/>}/>
+        <Route path="/about" element={<About handlePageChange={handlePageChange}/>}/>
+        <Route path="/resources" element={<Resources handlePageChange={handlePageChange}/>}/>
       </Routes>
     </>
   )

@@ -1,5 +1,5 @@
 // npm modules
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 // components
 import LoginForm from '../../components/LoginForm/LoginForm'
@@ -10,12 +10,17 @@ import styles from './Login.module.css'
 // types
 interface LoginPageProps {
   handleAuthEvt: () => void;
+  handlePageChange: () => void;
 } 
 
 const LoginPage = (props: LoginPageProps): JSX.Element => {
   const [message, setMessage] = useState('')
 
   const updateMessage = (msg: string): void => setMessage(msg)
+
+  useEffect(() => {
+    props.handlePageChange()
+  }, [])
 
   return (
     <main className={styles.container}>

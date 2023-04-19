@@ -1,6 +1,15 @@
+import { useEffect } from 'react';
 import styles from './About.module.css'
 
-const About = (): JSX.Element => {
+interface AboutProps {
+  handlePageChange: () => void;
+}
+
+const About = (props: AboutProps): JSX.Element => {
+
+  useEffect(() => {
+    props.handlePageChange()
+  }, [])
 
   return (
     <main className={styles.container}>

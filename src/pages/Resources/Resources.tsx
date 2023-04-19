@@ -1,10 +1,20 @@
+import { useEffect } from "react";
+
 import { Link } from "react-router-dom"
 
 import Collar from '../../assets/collar-color.png'
 
 import styles from './Resources.module.css'
 
-const Resources = (): JSX.Element => {
+interface ResourcesProps {
+  handlePageChange: () => void;
+}
+
+const Resources = (props: ResourcesProps): JSX.Element => {
+
+  useEffect(() => {
+    props.handlePageChange()
+  }, [])
 
   return (
     <main className={styles.content} >

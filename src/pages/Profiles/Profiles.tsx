@@ -20,13 +20,17 @@ interface ProfilesProps {
   user: User | null;
   handleDeleteDog: (id: number) => Promise<void>;
   dogs: Dog[];
+  handlePageChange: () => void;
 }
 
 const Profiles = (props: ProfilesProps): JSX.Element => {
-  const { user, handleDeleteDog, dogs } = props
+  const { user, handleDeleteDog, dogs, handlePageChange } = props
   
   const [profiles, setProfiles] = useState<Profile[]>([])
 
+  useEffect(() => {
+    handlePageChange()
+  }, [])
 
   useEffect((): void => {
     const fetchProfiles = async (): Promise<void> => {
