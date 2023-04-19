@@ -26,8 +26,7 @@ const SmallScreenNav = (props: SmallScreenProps): JSX.Element => {
             {isOpen ? 'x' : '≡'}
           </button>
 
-          <div>
-            
+          <div >
             {isOpen && (user ?
               <ul >
                 <li><NavLink to="/about">About</NavLink></li>
