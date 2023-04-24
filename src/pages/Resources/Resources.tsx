@@ -23,7 +23,7 @@ const Resources = (props: ResourcesProps): JSX.Element => {
         <img src={Collar} alt="dog collar" />
       </div>
       <h4>
-        The following resources - at the time of posting - are based on positive reinforcement methods and use effective and safe behavior-change strategies. See "About" section for additional information. Login to set up a profile for your dog!
+        The following resources - at the time of posting - are based on positive reinforcement methods and use effective and safe behavior-change strategies. See "About" section for additional information.
       </h4>
       <div className={styles.resources}>
         <div className={styles.aLink}>
@@ -32,7 +32,7 @@ const Resources = (props: ResourcesProps): JSX.Element => {
             Intro to Training
           </Link>
           <ul>
-            <li>A brief beginner's guide to understanding dog training resources and methods, including tips for identifying effective and humane techniques and potential red flags to watch out for.</li>
+            <li>A brief beginner's guide to understanding dog training resources and methods.</li>
           </ul>
           <Link to="https://youtu.be/omZt5Eu8nfE" target="_blank">
             Clicker Training Basics Video
@@ -75,7 +75,7 @@ const Resources = (props: ResourcesProps): JSX.Element => {
           </Link>
           <ul>
             <li>
-              Karen Overall's protocols for behavior modification look intimidating, but they're not hard to understand once you get into them. These are fantastic documents. There are many good resources on the site. The following two are great foundational guidelines for overall behavior improvment.
+              These are fantastic documents, and there are many good resources on the site. The following two are great foundational guidelines for overall behavior improvement.
             </li>
             <li>
               <Link to="https://www.karenoverall.com/protocol-for-deference/" target="_blank">
@@ -107,12 +107,12 @@ const Resources = (props: ResourcesProps): JSX.Element => {
             DIY Canine Enrichment
           </Link>
           <ul>
-            <li>This is a public facebook group, so take it with a grain of salt and an eye towards evaluating safety, but people share some great and creative ideas here</li>
+            <li>This is a public facebook group, so be discerning with safety, but people share some great and creative ideas here</li>
           </ul>
         </div>
         <div className={styles.aLink}>
           <h3 >Reactive Dog Resources</h3>
-          <h5><em>DISCLAIMER!</em> While these resources can be beneficial, some dogs need more training than non-professionals can provide. If your dog is reactive or aggressive, a good trainer or behaviorist may be your best option. I cannot evaluate or advise on individual cases.</h5>
+          <h5><em>DISCLAIMER!</em> While these resources can be beneficial, some dogs need professional. If your dog is reactive or aggressive, a good trainer or behaviorist may be your best option. I cannot evaluate or advise on individual cases.</h5>
           <Link to="https://youtube.com/playlist?list=PLXtcKXk-QWojGYcl1NCg5UA5geEnmpx4a" target="_blank">
             Kikopup: Reactivity & Barking Playlist
           </Link>

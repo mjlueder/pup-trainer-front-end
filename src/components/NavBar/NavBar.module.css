@@ -98,11 +98,11 @@
 }
 
 .menuBtn {
-  font-size: 24px;
+  font-size: 20px;
   padding: 0 12px 0;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  text-align: center;
+  text-align: center; */
 }
 .menuBtn p {
   margin: 0;
@@ -124,8 +124,7 @@
     color: black;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    
+    font-size: 17px;
   }
   .menu a:visited {
     color: black;
@@ -144,5 +143,8 @@
     border: 1px solid rgb(85, 85, 85);
     padding-left: 16px;
     padding: 4px 12px;
+  }
+  .menuBtn {
+
   }
 }
