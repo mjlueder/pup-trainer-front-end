@@ -44,7 +44,7 @@ const NewDogForm = (props: NewDogFormProps): JSX.Element => {
       <div className={styles.content}>
         <h1 className={styles.title}>Add A Dog</h1>
         <form onSubmit={handleSubmit} className={styles.formDiv}>
-          <label htmlFor="dogname-input">Name:</label>
+          <label htmlFor="dogname-input">*Name:</label>
           <input 
             type="text" 
             id="dogname-input" 

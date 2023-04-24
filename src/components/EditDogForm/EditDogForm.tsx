@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useLocation } from "react-router";
+import { Link } from "react-router-dom";
 
 //types
 import { DogFormData } from "../../types/forms"
@@ -55,6 +56,9 @@ const EditDogForm = (props: EditDogFormProps): JSX.Element => {
         <div></div>
         <button type="submit" className={styles.submit}>Update Dog</button>
       </form>
+      <Link to="/profile">
+        <button>Cancel</button>
+      </Link>
     </div>
   )
 }
