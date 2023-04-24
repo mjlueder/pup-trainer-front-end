@@ -34,7 +34,12 @@
 
 .details {
   font-size: 22px;
-  margin: 0 20px;
+  margin: 0 16px;
+}
+
+.details h4 {
+  margin-bottom: 4px;
+  margin-top: 8px;
 }
 
 @media only screen and (max-width: 600px) {

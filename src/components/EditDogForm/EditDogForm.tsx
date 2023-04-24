@@ -55,10 +55,11 @@ const EditDogForm = (props: EditDogFormProps): JSX.Element => {
         </div>
         <div></div>
         <button type="submit" className={styles.submit}>Update Dog</button>
+        <div></div>
+        <Link to="/profile">
+          <button className={styles.submit}>Cancel</button>
+        </Link>
       </form>
-      <Link to="/profile">
-        <button>Cancel</button>
-      </Link>
     </div>
   )
 }

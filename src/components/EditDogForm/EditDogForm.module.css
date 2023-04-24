@@ -49,9 +49,13 @@
   .submit {
     width: 50%;
   }
+  .title {
+    text-align: center;
+    font-size: 45px;
+  }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .title {
     text-align: center;
     font-size: 35px;
