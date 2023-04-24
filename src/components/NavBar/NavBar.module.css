@@ -113,6 +113,7 @@
   .nav {
     display: flex;
     justify-content: space-between;
+    /* align-items: center; */
   }
   .menu {
     z-index: 1;
@@ -133,11 +134,15 @@
   .menu ul {
     background-color: rgb(240, 240, 240);
     list-style-type: none;
-    padding-left: 16px;
+    padding-left: 0;
     margin-top: 0;
-    
+    border: .5px solid rgb(85, 85, 85);
+    text-align: center;
   }
   .menu li {
     padding-bottom: 4px;
+    border: 1px solid rgb(85, 85, 85);
+    padding-left: 16px;
+    padding: 4px 12px;
   }
 }
