@@ -58,6 +58,7 @@
   }
   .formDiv {
     width: 90%;
+    grid-template-columns: 35% 65%;
   }
   .submit {
     width: 70%;
