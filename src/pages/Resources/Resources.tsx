@@ -112,13 +112,13 @@ const Resources = (props: ResourcesProps): JSX.Element => {
         </div>
         <div className={styles.aLink}>
           <h3 >Reactive Dog Resources</h3>
-          <h5><em>DISCLAIMER!</em> While these resources can be beneficial, some dogs need professional. If your dog is reactive or aggressive, a good trainer or behaviorist may be your best option. I cannot evaluate or advise on individual cases.</h5>
+          <h5><em>DISCLAIMER:</em> While these resources can be beneficial, some dogs need professional training. If your dog is reactive or aggressive, a good trainer or behaviorist may be your best option.</h5>
           <Link to="https://youtube.com/playlist?list=PLXtcKXk-QWojGYcl1NCg5UA5geEnmpx4a" target="_blank">
             Kikopup: Reactivity & Barking Playlist
           </Link>
           <br />
           <Link to="https://youtube.com/playlist?list=PLqj_se-bICd_yaGWw86hhq2S-ZXiZ5V8p" target="_blank">
-            Reactive Dog Video Playlist
+            Reactive Dog Training Video Playlist
           </Link>
         </div>
         <div className={styles.bLink}>
