@@ -33,6 +33,9 @@
   .title {
     font-size: 45px;
   }
+  .img {
+    width: 33.333%
+  }
 }
 
 @media only screen and (max-width: 500px) {

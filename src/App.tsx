@@ -151,7 +151,7 @@ function App(): JSX.Element {
         />
         {/* Saving for possible future use */}
         <Route path="/dogs" element={<Dogs dogs={dogs} user={user} handleDeleteDog={handleDeleteDog} handlePageChange={handlePageChange}/>}/>
-        <Route path="/about" element={<About handlePageChange={handlePageChange}/>}/>
+        <Route path="/about" element={<About handlePageChange={handlePageChange} width={width}/>}/>
         <Route path="/resources" element={<Resources handlePageChange={handlePageChange}/>}/>
       </Routes>
     </>

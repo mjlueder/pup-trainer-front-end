@@ -3,22 +3,26 @@ import styles from './About.module.css'
 
 interface AboutProps {
   handlePageChange: () => void;
+  width: number;
 }
 
 const About = (props: AboutProps): JSX.Element => {
+  const { width, handlePageChange } = props
 
   useEffect(() => {
-    props.handlePageChange()
+    handlePageChange()
   }, [])
 
   return (
     <main className={styles.container}>
       <h1 className={styles.title}>About Pup Trainer</h1>
         <div className={styles.images}>
-          <img src="https://res.cloudinary.com/dmxca77ml/image/upload/v1677530377/t0zdjph3za2b1mz7gvgi.jpg" className={styles.img} />
+          {width > 750 &&
+          <img src="https://res.cloudinary.com/dmxca77ml/image/upload/v1677530377/t0zdjph3za2b1mz7gvgi.jpg" className={styles.img} />}
           <img src="https://res.cloudinary.com/dmxca77ml/image/upload/v1677530294/e44ckmcww0upr6194u5g.jpg" alt="Teddy the destroyer (dog)" className={styles.img} />
           <img src="https://res.cloudinary.com/dmxca77ml/image/upload/v1677598648/raa8vc0urvzrqqnra0rx.jpg" alt="Roscoe and Teddy (dogs)" className={styles.img}/>
-          <img src="https://res.cloudinary.com/dmxca77ml/image/upload/v1677598576/lw1pownu4i2wezlqhyuu.jpg" alt="Roscoe (dog)" className={styles.img}/>
+          {width > 750 &&
+          <img src="https://res.cloudinary.com/dmxca77ml/image/upload/v1677598576/lw1pownu4i2wezlqhyuu.jpg" alt="Roscoe (dog)" className={styles.img}/>}
           <img src="https://res.cloudinary.com/dmxca77ml/image/upload/v1677598557/dflcpyme9xzzrbefsbrd.jpg" alt="Roscoe (dog)" className={styles.img}/>
         </div>
         <div>
