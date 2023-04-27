@@ -40,14 +40,19 @@
   text-decoration: none;
 }
 
+.resources a:before {
+  content: "🔹 ";
+  font-size: 16px;
+}
+
 .resources ul {
   margin: 0;
 }
 
 .resources li {
-  list-style-type: "🐾";
-  list-style: circle;
-  padding: 0 0 0 10px;
+  /* list-style-type: "🐾"; */
+  list-style: none;
+  padding: 0;
 }
 
 .resources h5 {
