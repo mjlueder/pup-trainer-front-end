@@ -23,13 +23,13 @@ const About = (props: AboutProps): JSX.Element => {
         </div>
         <div>
           <h4>
-            Meet Roscoe and Teddy, the inspiration behind Pup Trainer. Teddy (the hound mix) had a challenging start in life and arrived at his forever home with a lot of baggage. Despite my extensive background as an animal trainer and husbandry professional, I struggled to manage Teddy's behavior and sought additional resources to help him thrive.
+            Meet Roscoe and Teddy, the inspiration behind Pup Trainer. Teddy (the hound mix) had a challenging start in life and came to me with a lot of baggage. Despite my background as an animal trainer and husbandry professional, I struggled to manage Teddy's behavior and sought additional resources to help him thrive.
           </h4>
           <h4>
-            Unfortunately, I found that while there are numerous dog training resources available online, it can be difficult to distinguish the effective and reputable ones from the rest. That's why I created Pup Trainer: to provide dog owners with access to legitimate, positive, and effective training materials.
+            While looking, I found that there are numerous dog training resources available online, but many of them are not safe or effective. It can be difficult to distinguish the good and reputable ones from the rest. That's why I created Pup Trainer: to provide dog owners with access to legitimate, positive, and effective training materials.
           </h4>
           <h4>
-            Training your dog is not only fun but a great tool for improving their well-being and the overall happiness of your household. With Pup Trainer, you can skip the frustrating and time-consuming search for quality training resources and dive straight into the fun of bonding with your pup.
+            Training your dog is not only fun but a great tool for improving their well-being and the overall happiness of your household. With Pup Trainer, you can skip the time-consuming search for quality training resources and dive straight into the fun of bonding with your pup.
           </h4>
           <h4>
             <strong><em>About me: </em></strong>I have more than a decade of professional animal care, management, and training experience. I follow positive reinforcement principles, have a deep understanding of behavior and psychology principles, and know what makes a training plan safe, effective, and beneficial. 
