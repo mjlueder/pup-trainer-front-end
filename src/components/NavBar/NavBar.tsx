@@ -58,13 +58,13 @@ const NavBar = (props: NavBarProps): JSX.Element => {
         </ul>
       :
         <ul className={styles.components}>
+          <NavLink to="/"><img src={DogHouse} alt="dog house icon" className={styles.homeIcon}/></NavLink>
           <div className={styles.guestLinks}>
-            <NavLink to="/"><img src={DogHouse} alt="dog house icon" className={styles.homeIcon}/></NavLink>
             <li>
-                <NavLink to="/about">About</NavLink>
+                <NavLink to="/about">About 🐾&nbsp;</NavLink>
             </li>
             <li>
-                <NavLink to="/resources">🐾 Training Resources 🐾</NavLink>
+                <NavLink to="/resources"> Training Resources 🐾</NavLink>
             </li>
             <li><NavLink to="/dogs">&nbsp;All Dogs</NavLink></li>
           </div>

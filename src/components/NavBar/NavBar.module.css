@@ -45,6 +45,7 @@
 .guestLinks {
   display: flex;
   align-items: center;
+  /* justify-content: space-between; */
 }
 
 .guestLinks :nth-child(2) {
